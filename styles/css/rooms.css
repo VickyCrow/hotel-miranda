@@ -1,0 +1,106 @@
+@charset "UTF-8";
+header {
+  width: 100%;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
+  padding: 1rem;
+}
+header button, header div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#header-button-container {
+  position: absolute;
+  right: 1rem;
+}
+
+#title-logo-container {
+  width: 60%;
+}
+
+#logo-container {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.2509803922);
+  text-align: center;
+  margin-right: 0.3rem;
+}
+#logo-container img {
+  vertical-align: middle;
+}
+
+footer {
+  padding: 1rem;
+  background-image: url("../../../img/footer/Rectángulo 2 1.png");
+}
+footer .light-square {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border: none;
+  background-color: #BEAD8E;
+  color: white;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  padding: calc(2.5rem - 20px);
+  display: inline-block;
+}
+footer .light-square h1 {
+  font-size: 40px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+footer h3 {
+  display: inline-block;
+  margin-left: 1.5rem;
+  font-size: 24px;
+}
+footer p {
+  font-family: Archivo;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #777777;
+}
+
+#footer-title {
+  margin-bottom: 3rem;
+}
+
+#footer-container button {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border: none;
+  display: inline-block;
+}
+
+html, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: Archivo;
+  font-weight: 400;
+}
+
+.square-button {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border: none;
+}
+
+.dark-span {
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=rooms.css.map */

@@ -4,60 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/pages/home.css">
 </head>
 <body>
     <!-- PREGUNTAR SI EL MENÚ DESPLEGABLE ES PARA ESTE SPRINT-->
     <!-- PREGUNTAR SI LOS SLIDES SON PARA ESTE SPRINT-->
     <header>
-        <button id="burguer-menu"><!-- MENU ICON --></button>
-        <div id="title-logo-containter">
-            <img className="logo-icon"/>
+        <button id="burguer-menu"><img src="./img/header/burguer.png" alt=""></button>
+        <div id="title-logo-container">
+            <div id="logo-container">
+                <img src="./img/header/H.png"/>
+            </div>
             <div id="title-container">
-                <h4><b>HOTEL</b></h4>
-                <h5>MIRANDA</h5>
+                <img src="./img/header/hotel_miranda.png" alt="">
             </div>
         </div>
-        <button className="square-button" id="profile-icon-button"><!-- PROFILE ICON --></button>
-        <button className="square-button" id="search-icon-button"><!-- SEARCH ICON --></button>
+        <button class="square-button" id="profile-icon-button"><!-- PROFILE ICON --></button>
+        <button class="square-button" id="search-icon-button"><!-- SEARCH ICON --></button>
     </header>
     <main>
         <section id="title-section">
             <h3 id="ultimate-luxury-h">THE ULTIMATE LUXURY EXPERIENCE</h3>
             <h1 id="base-h">The Perfect Base For You</h1>
-            <button className="light-rectangle-button">TAKE A TOUR</button>
-            <button className="dark-rectangle-button"> LEARN MORE</button>
-
+            <button class="light-rectangle-button">TAKE A TOUR</button>
+            <button class="dark-rectangle-button"> LEARN MORE</button>
         </section>
         <section id="book-check-section">
             <form action="" id="book-check-form">
                 <label for="arrival-input">Arrival Date</label>
-                <input type="text" id="arrival-input" className="book-check-input"/>
+                <input type="text" id="arrival-input" class="book-check-input"/>
                 <label for="departure-input">LeDeparture Date</label>
-                <input type="text" id="departure-input" className="book-check-input">
-                <button id="book-check-submit" className="light-rectangle-button">CHECK AVAILABILITY</button>
+                <input type="text" id="departure-input" class="book-check-input">
+                <button id="book-check-submit" class="light-rectangle-button">CHECK AVAILABILITY</button>
             </form>
         </section>
         <section id="about-section">
             <div>
-                <h4 className="mini-title-h">ABOUT US</h4>
+                <h4 class="mini-title-h">ABOUT US</h4>
                 <h1>Discover Our Underground.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, reprehenderit voluptate deserunt eius accusamus quas. Blanditiis exercitationem ducimus quae sequi consectetur minima iste, fuga neque tempore! Explicabo doloribus fugiat non?</p>
-                <button id="about-book-button">BOOK NOW</button>
+                <button id="about-book-button"><a href="./pages/rooms.html">BOOK NOW</a></button>
             </div>
             <div>
-                <div className="about-container">
-                    <img src="" alt="" className="about-img"/>
+                <div class="about-container">
+                    <img src="" alt="" class="about-img"/>
                 </div>
-                <div className="about-container">
-                    <img src="" alt=""  className="about-icon"/>
+                <div class="about-container">
+                    <img src="" alt=""  class="about-icon"/>
                     <h3>Strong Team</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, soluta. Quisquam tempora sit quos dolorum. Doloremque, animi veritatis. Minus nemo cumque assumenda similique omnis ut magnam, ratione debitis quaerat. Nesciunt?</p>
                 </div>
-                <div className="about-container">
-                    <img src="" alt="" className="about-img"/>
+                <div class="about-container">
+                    <img src="" alt="" class="about-img"/>
                 </div>
-                <div className="about-container">
-                    <img src="" alt="" className="about-icon">
+                <div class="about-container">
+                    <img src="" alt="" class="about-icon">
                     <h3>Strong Team</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, soluta. Quisquam tempora sit quos dolorum. Doloremque, animi veritatis. Minus nemo cumque assumenda similique omnis ut magnam, ratione debitis quaerat. Nesciunt?</p>
                 </div>
@@ -65,7 +66,7 @@
 
         </section>
         <section id="rooms-section">
-            <h4 className="mini-title-h">ABOUT US</h4>
+            <h4 class="mini-title-h">ABOUT US</h4>
             <h1>Hand Picked Rooms</h1>
             <!-- NO SE COMO SE HACE ESTO -->
             <div id="room-icon-nav">
@@ -80,8 +81,8 @@
                 </ul>
             </div>
             <div id="room-slider-container">
-                <button className="button-slider-arrow" id="room-slide-left-arrow"></button>
-                <button className="button-slider-arrow" id="room-slide-right-arrow"></button>
+                <button class="button-slider-arrow" id="room-slide-left-arrow"></button>
+                <button class="button-slider-arrow" id="room-slide-right-arrow"></button>
             </div>
             <div>
                 <h2>Minimal Duplex Room</h2>
@@ -92,15 +93,15 @@
                 </div>
             </div>
         </section>
-        <section id="intro-video-section" className="dark-background">
-            <h4 className="mini-title-h">INTRO VIDEO</h4>
+        <section id="intro-video-section" class="dark-background">
+            <h4 class="mini-title-h">INTRO VIDEO</h4>
             <h1>Meet With Our Luxury Place.</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio assumenda, pariatur facere est cum vel. Magni suscipit doloribus aliquid neque ipsum dicta, numquam quibusdam ratione veniam impedit eum, aliquam illo.</p>
             <video src=""></video>
-            <button className="light-rectangle-button">BOOK NOW</button>
+            <button class="light-rectangle-button">BOOK NOW</button>
         </section>
         <section id="facilities-section">
-            <h4 className="mini-title-h">FACILITIES</h4>
+            <h4 class="mini-title-h">FACILITIES</h4>
             <h1>Core Features</h1>
             <div id="facilities-slider-container">
                 <img src="" alt=""/>
@@ -111,26 +112,26 @@
         </section>
         <section id="menu-section">
             <img src="" alt=""/>
-            <h4 className="mini-title-h">MENU</h4>
+            <h4 class="mini-title-h">MENU</h4>
             <h1>Our Foods Menu</h1>
             <div id="menu-dishes-container">
-                <div className="menu-dish-container">
+                <div class="menu-dish-container">
                     <img src="" alt=""/>
-                    <div className="menu-description-container">
+                    <div class="menu-description-container">
                         <h4>Eggs & Bacon</h4>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia natus laudantium ratione nesciunt laboriosam repudiandae voluptatem sapiente ad perspiciatis illo quo unde labore ipsum velit amet quod repellat, sequi quisquam.</p>
                     </div>
                 </div>
-                <div className="menu-dish-container">
+                <div class="menu-dish-container">
                     <img src="" alt=""/>
-                    <div className="menu-description-container">
+                    <div class="menu-description-container">
                         <h4>Tea or Coffee</h4>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia natus laudantium ratione nesciunt laboriosam repudiandae voluptatem sapiente ad perspiciatis illo quo unde labore ipsum velit amet quod repellat, sequi quisquam.</p>
                     </div>
                 </div>
-                <div className="menu-dish-container">
+                <div class="menu-dish-container">
                     <img src="" alt=""/>
-                    <div className="menu-description-container">
+                    <div class="menu-description-container">
                         <h4>Chia Oatmeal</h4>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia natus laudantium ratione nesciunt laboriosam repudiandae voluptatem sapiente ad perspiciatis illo quo unde labore ipsum velit amet quod repellat, sequi quisquam.</p>
                     </div>
@@ -142,7 +143,7 @@
             </div>
         </section>
         <!-- SLIDER SIN SECCIÓN APARENTE-->
-        <section id="data-section" className="dark-background">
+        <section id="data-section" class="dark-background">
             <div id="data-container">
                 <img src="" alt=""/>
                 <h2>84k</h2><p>+</p>
@@ -196,21 +197,21 @@
         </div>
         <div id="contact-container">
             <h4>Contact Us.</h4>
-            <div className="phone-container">
+            <div class="phone-container">
                 <img src="" alt=""/>
                 <div id="phone-number-container">
                     <h4>Phone Number</h4>
                     <p>+987 876 765 76 577</p>
                 </div>
             </div>
-            <div className="phone-container">
+            <div class="phone-container">
                 <img src="" alt=""/>
                 <div id="phone-number-container">
                     <h4>Phone Number</h4>
                     <p>+987 876 765 76 577</p>
                 </div>
             </div>
-            <div className="phone-container">
+            <div class="phone-container">
                 <img src="" alt=""/>
                 <div id="phone-number-container">
                     <h4>Phone Number</h4>

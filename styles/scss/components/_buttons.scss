@@ -1,0 +1,12 @@
+@mixin square{
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border: none;
+}
+
+@mixin light-square{
+    @include square;
+    background-color: #BEAD8E;
+    color: white;
+}
