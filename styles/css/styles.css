@@ -1,0 +1,29 @@
+header {
+  width: 100%;
+  color: #ffffff;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
+  padding: 1rem;
+}
+header button {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+}
+
+#logo-container {
+  width: 1rem;
+  background-color: white;
+  box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.2509803922);
+}
+
+html, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,51 @@
+
+@use 'buttons' as buttons;
+
+footer{
+    padding: 1rem;
+    background-image: url("../../../img/footer/Rectángulo\ 2\ 1.png");
+
+    .light-square{
+        @include buttons.light-square;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        padding: calc(5rem / 2 - 20px);
+        display: inline-block;
+    
+        h1{
+            font-size: 40px;
+            font-weight: 700;
+            vertical-align: middle;
+        }
+    }
+
+    h3{
+        display: inline-block;
+        margin-left: 1.5rem;
+        font-size: 24px;
+    }
+
+    p{
+        font-family: Archivo;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color:#777777;
+
+    }
+}
+
+#footer-title{
+    margin-bottom: 3rem;
+}
+
+#footer-container{
+    button{
+        @include buttons.square;
+        display:inline-block;
+    }
+}
+
+
+

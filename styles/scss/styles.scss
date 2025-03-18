@@ -1,0 +1,29 @@
+
+@use './components/buttons' as b;
+@use './components/header';
+@use './components/footer';
+
+html, * { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+body {
+    min-width: 320px;
+
+}
+
+h1,h2,h3,h4,h5{
+    font-family: Archivo;
+    font-weight: 400;
+}
+
+.square-button{
+    @include b.square;
+}
+
+
+
+.dark-span{
+    font-weight: 700;
+}
