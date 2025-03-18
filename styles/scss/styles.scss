@@ -2,6 +2,11 @@
 @use './components/buttons' as b;
 @use './components/header';
 @use './components/footer';
+@use './components/titlesection';
+
+:root{
+    --gold-color: #BEAD8E;
+}
 
 html, * { 
     box-sizing: border-box;
@@ -13,14 +18,14 @@ body {
 
 }
 
-
-
 .square-button{
     @include b.square;
 }
 
-
-
 .dark-span{
     font-weight: 700;
+}
+
+.dark-background{
+    background-color: #333333;
 }

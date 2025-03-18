@@ -48,7 +48,7 @@ footer .light-square {
   height: 2rem;
   background-color: white;
   border: none;
-  background-color: #BEAD8E;
+  background-color: var(--gold-color);
   color: white;
   width: 5rem;
   height: 5rem;
@@ -57,6 +57,7 @@ footer .light-square {
   display: inline-block;
 }
 footer .light-square h1 {
+  font-family: Archivo;
   font-size: 40px;
   font-weight: 700;
   vertical-align: middle;
@@ -89,7 +90,7 @@ footer p {
   padding: 0.25rem;
 }
 #footer-container button:hover {
-  background-color: #BEAD8E;
+  background-color: var(--gold-color);
 }
 #footer-container button img {
   width: 1.5rem;
@@ -128,6 +129,47 @@ footer p {
   margin-bottom: 1rem;
 }
 
+#title-section {
+  padding: 2rem 2rem 0 2rem;
+  color: white;
+}
+#title-section h3 {
+  font-family: Archivo;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 2.8px;
+}
+#title-section h1 {
+  font-family: Old Standard TT;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+}
+#title-section div {
+  background-color: white;
+  padding: 1rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 0;
+}
+#title-section p {
+  font-family: Archivo;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.48px;
+  color: black;
+}
+#title-section p span {
+  color: var(--gold-color);
+}
+
+:root {
+  --gold-color: #BEAD8E;
+}
+
 html, * {
   box-sizing: border-box;
   margin: 0;
@@ -147,6 +189,10 @@ body {
 
 .dark-span {
   font-weight: 700;
+}
+
+.dark-background {
+  background-color: #333333;
 }
 
 /*# sourceMappingURL=rooms.css.map */

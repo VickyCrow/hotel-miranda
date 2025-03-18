@@ -1,0 +1,46 @@
+#title-section{
+
+    padding: 2rem 2rem 0 2rem;
+    color: white;
+
+    h3{
+        font-family: Archivo;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 2.8px;
+    }
+
+    h1{
+        font-family: Old Standard TT;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 60px;
+        letter-spacing: -1.2px;
+    }
+
+    div{
+        background-color: white;
+        padding: 1rem;
+        width:fit-content;
+        margin-left:auto;
+        margin-right: 0;
+    }
+
+
+    p{
+        font-family: Archivo;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -0.48px;
+
+        color: black;
+
+        span{
+            color: var(--gold-color);
+        }
+
+    }
+
+}

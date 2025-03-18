@@ -7,6 +7,6 @@
 
 @mixin light-square{
     @include square;
-    background-color: #BEAD8E;
+    background-color: var(--gold-color);
     color: white;
 }
