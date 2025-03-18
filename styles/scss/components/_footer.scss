@@ -5,6 +5,14 @@ footer{
     padding: 1rem;
     background-image: url("../../../img/footer/Rectángulo\ 2\ 1.png");
 
+    h4{
+        font-family: Old Standard TT !important;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+        margin: 3rem 0;
+    }
+
     .light-square{
         @include buttons.light-square;
         width: 5rem;
@@ -14,6 +22,7 @@ footer{
         display: inline-block;
     
         h1{
+            font-family: Archivo;
             font-size: 40px;
             font-weight: 700;
             vertical-align: middle;
@@ -21,6 +30,8 @@ footer{
     }
 
     h3{
+        font-family: Archivo;
+        font-weight: 400;
         display: inline-block;
         margin-left: 1.5rem;
         font-size: 24px;
@@ -34,6 +45,10 @@ footer{
         color:#777777;
 
     }
+
+    
+
+    
 }
 
 #footer-title{
@@ -44,7 +59,63 @@ footer{
     button{
         @include buttons.square;
         display:inline-block;
+        padding: 0.25rem;
+
+
+        &:hover{
+            background-color: #BEAD8E;
+        }
+
+        img{
+            width: 1.5rem;
+        }
+
     }
+
+    
+}
+
+#services-container{
+    
+    .column{
+        height: 100%;
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
+        top: 0;
+        p{
+            line-height: 48px;
+        }
+    }
+}
+
+#contact-container{
+
+    div{
+        display: inline-block;
+        margin-bottom: 2rem;
+
+        h4{
+            margin: 0 !important;
+        }
+    }
+}
+
+#copyright-container{
+    background-color: #F8F8F8;
+    padding-top: 1rem;
+    
+
+    p{
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -0.48px;
+        color: black;
+        margin-bottom: 1rem;
+    }
+    
 }
 
 
