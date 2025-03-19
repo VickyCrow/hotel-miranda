@@ -1,5 +1,6 @@
 
 @use 'buttons' as buttons;
+@use 'text' as text;
 
 footer{
     padding: 1rem;
@@ -78,11 +79,8 @@ footer{
 #services-container{
     
     .column{
-        height: 100%;
-        width: 47%;
-        display: inline-block;
-        vertical-align: top;
-        top: 0;
+        @include text.column;
+        
         p{
             line-height: 48px;
         }

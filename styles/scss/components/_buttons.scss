@@ -7,6 +7,18 @@
 
 @mixin light-square{
     @include square;
+    @include gold-button;
+}
+
+@mixin gold-button{
     background-color: var(--gold-color);
+    font-family: Archivo;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
     color: white;
+    border: none;
+
 }

@@ -192,7 +192,7 @@ body {
 }
 
 .dark-background {
-  background-color: #333333;
+  background-color: var(--dark-color);
 }
 
 /*# sourceMappingURL=rooms.css.map */
