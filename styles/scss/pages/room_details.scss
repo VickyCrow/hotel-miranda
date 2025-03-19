@@ -1,0 +1,113 @@
+@use '../styles.scss';
+@use '../components/form' as form;
+@use '../components/text' as text;
+
+section{
+    padding: 1rem;
+
+    h2{
+        font-family: Old Standard TT;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: 0px;
+    }
+
+    p{
+        @include text.lorem;
+    }
+}
+
+#room-details-section{
+
+    h1{
+        color: black;
+        margin-bottom: 1rem;
+
+    }
+    .mini-title-h{
+        margin: 1rem 0;
+    }
+
+    .yellow-price{
+        text-align: start;
+        span{
+            font-size: 12px;
+        }
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+#availability-section{
+
+    .light-rectangle-button{
+        width: 100%;
+    }
+
+    h5{
+        font-family: Archivo;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: -0.54px;
+        text-align: right;
+        text-align: center;
+    }
+    label{
+        font-family: Archivo;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0px;
+
+    }
+    input[type=date]{
+        @include form.text-input;
+    }
+}
+
+
+#amenities-section{
+    
+
+    .column{
+        @include text.column;
+        margin: 1rem 0;
+        p{
+            line-height: 1rem;
+        }
+    }
+
+}
+
+#rosalina-section{
+    text-align: center;
+    justify-content: center;
+    & > *{
+        margin: 2rem 0;
+    }
+
+    h3{
+        font-family: Old Standard TT;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: -0.9px;
+
+    }
+    h4{
+        font-family: Archivo;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+        color:var(--gold-color);
+
+    }
+
+}
+

@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/css/rooms.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <header>
@@ -30,16 +37,29 @@
         
     </header>
     <main>
-        <section id="title-section">
-            <h3 id="ultimate-luxury-h">THE ULTIMATE LUXURY</h3>
-            <h1 id="base-h">Ultimate Room</h1>
-            <div id="home-about-container">
-                <p>Home | Rooms</p>
+        <section id="title-section" class="dark-background">
+            <h3>THE ULTIMATE LUXURY</h3>
+            <h1>Ultimate Room</h1>
+            <div>
+                <p>Home | <span>Rooms</span> </p>
             </div>
         </section>
         <section id="rooms-section">
             <div class="slider-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
 
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  
+                  </div>
             </div>
             <div class="slider-container">
 
@@ -74,51 +94,57 @@
             <button><img src="../img/footer/be-icon.png" alt=""></button>
             <button><img src="../img/footer/in-icon.png" alt=""></button>
             <button><img src="../img/footer/yt-icon.png" alt=""></button>
-            <button></button>
+            <button><img src="../img/footer/tw-icon.png" alt=""></button>
         </div>
         <div id="services-container">
             <h4>Services.</h4>
-            <ul>
-                <li>+ Resturent & Bar</li>
-                <li>+ Swimming Pool</li>
-                <li>+ Wellness & Spa</li>
-                <li>+ Restaurant</li>
-                <li>+ Conference Room</li>
-                <li>+ Coctail Party House</li>
-                <li>+ Gaming Zone</li>
-                <li>+ Marrige Party</li>
-                <li>+ Party Planning</li>
-                <li>+ Tour Consultancy</li>
-            </ul>
+            <div class="column">
+                <p>+ Resturent & Bar</p>
+                <p>+ Swimming Pool</p>
+                <p>+ Wellness & Spa</p>
+                <p>+ Restaurant</p>
+                <p>+ Conference Room</p>
+                <p>+ Coctail Party House</p>
+            </div>
+            <div class="column">
+                <p>+ Gaming Zone</p>
+                <p>+ Marrige Party</p>
+                <p>+ Party Planning</p>
+                <p>+ Tour Consultancy</p>
+            </div>
         </div>
         <div id="contact-container">
             <h4>Contact Us.</h4>
             <div class="phone-container">
-                <img src="" alt=""/>
-                <div id="phone-number-container">
+                <img src="../img/footer/phone-icon.png" alt=""/>
+                <div>
                     <h4>Phone Number</h4>
                     <p>+987 876 765 76 577</p>
                 </div>
             </div>
             <div class="phone-container">
-                <img src="" alt=""/>
-                <div id="phone-number-container">
+                <img src="../img/footer/email-icon.png" alt=""/>
+                <div>
                     <h4>Phone Number</h4>
                     <p>+987 876 765 76 577</p>
                 </div>
             </div>
             <div class="phone-container">
-                <img src="" alt=""/>
-                <div id="phone-number-container">
+                <img src="../img/footer/location-icon.png" alt=""/>
+                <div>
                     <h4>Phone Number</h4>
                     <p>+987 876 765 76 577</p>
                 </div>
-            </div>
-            <div id="copyright-terms-of-use-container">
-                <p>Copyright By@Example - 2020</p>
-                <p>Terms of use | Privacy Environmental Policy</p>
             </div>
         </div>
+        <div id="copyright-container">
+            <p>Copyright By@Example - 2020</p>
+            <p>Terms of use | Privacy Environmental Policy</p>
+        </div>
+        
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/swiper.js" type="module"></script>
+
 </body>
 </html>

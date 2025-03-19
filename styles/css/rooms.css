@@ -3,6 +3,8 @@ header {
   width: 100%;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
   padding: 1rem;
+  font-family: Archivo;
+  font-weight: 400;
 }
 header button, header div {
   display: inline-block;
@@ -34,12 +36,19 @@ footer {
   padding: 1rem;
   background-image: url("../../../img/footer/Rectángulo 2 1.png");
 }
+footer h4 {
+  font-family: Old Standard TT !important;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 3rem 0;
+}
 footer .light-square {
   width: 2rem;
   height: 2rem;
   background-color: white;
   border: none;
-  background-color: #BEAD8E;
+  background-color: var(--gold-color);
   color: white;
   width: 5rem;
   height: 5rem;
@@ -48,11 +57,14 @@ footer .light-square {
   display: inline-block;
 }
 footer .light-square h1 {
+  font-family: Archivo;
   font-size: 40px;
   font-weight: 700;
   vertical-align: middle;
 }
 footer h3 {
+  font-family: Archivo;
+  font-weight: 400;
   display: inline-block;
   margin-left: 1.5rem;
   font-size: 24px;
@@ -75,6 +87,87 @@ footer p {
   background-color: white;
   border: none;
   display: inline-block;
+  padding: 0.25rem;
+}
+#footer-container button:hover {
+  background-color: var(--gold-color);
+}
+#footer-container button img {
+  width: 1.5rem;
+}
+
+#services-container .column {
+  height: 100%;
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  top: 0;
+}
+#services-container .column p {
+  line-height: 48px;
+}
+
+#contact-container div {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+#contact-container div h4 {
+  margin: 0 !important;
+}
+
+#copyright-container {
+  background-color: #F8F8F8;
+  padding-top: 1rem;
+}
+#copyright-container p {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.48px;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+#title-section {
+  padding: 2rem 2rem 0 2rem;
+  color: white;
+}
+#title-section h3 {
+  font-family: Archivo;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 2.8px;
+}
+#title-section h1 {
+  font-family: Old Standard TT;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+}
+#title-section div {
+  background-color: white;
+  padding: 1rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 0;
+}
+#title-section p {
+  font-family: Archivo;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.48px;
+  color: black;
+}
+#title-section p span {
+  color: var(--gold-color);
+}
+
+:root {
+  --gold-color: #BEAD8E;
 }
 
 html, * {
@@ -87,11 +180,6 @@ body {
   min-width: 320px;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: Archivo;
-  font-weight: 400;
-}
-
 .square-button {
   width: 2rem;
   height: 2rem;
@@ -101,6 +189,10 @@ h1, h2, h3, h4, h5 {
 
 .dark-span {
   font-weight: 700;
+}
+
+.dark-background {
+  background-color: var(--dark-color);
 }
 
 /*# sourceMappingURL=rooms.css.map */
