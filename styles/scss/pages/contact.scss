@@ -1,8 +1,84 @@
-.phone-container{
-    display: inline-block;
-    margin-bottom: 2rem;
+@use '../styles';
 
+.phone-container{
     h4{
-        margin: 0 !important;
+        
+        margin-bottom: 1.5rem;
+        font-family: Old Standard TT;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0px;
+
+    }
+    p{
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0px;
+
+    }
+
+    img, div{
+        display:inline-block;
+        margin: 0 0.5rem;
+    }
+}
+
+.contact{
+    position: relative;
+    height: 10rem;
+    vertical-align: middle;
+    padding: 3rem 1rem;
+    margin: 4rem 0;
+
+    & > img{
+        position: absolute;
+        z-index: -1;
+        top:0;
+        right: 0;
+        height: 10rem;
+    }
+}
+
+#contact-section{
+    padding: 1rem;
+}
+
+#image-container{
+    width:100%;
+    position: relative;
+
+    img{
+        width:100%;
+    }
+}
+
+#form-section{
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    input,textarea{
+        border: none;
+        width: 100%;
+        margin: 1rem 0;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0px;
+        color: var(--dark-color);
+        background: url(../../../img/contacts/agenda-icon.png) no-repeat scroll 2px 2px #F8F8F8;
+        padding: 1rem;
+    }
+
+    input{
+        height: 3rem;
+    }
+    textarea{
+        height: 9rem;
+        padding-top: 1rem;
     }
 }
