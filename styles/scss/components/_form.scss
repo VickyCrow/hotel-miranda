@@ -1,0 +1,12 @@
+@mixin text-input{
+    border: none;
+    width: 100%;
+    margin: 1rem 0;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: var(--dark-color);
+    padding: 1rem;
+}

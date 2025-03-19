@@ -4,6 +4,7 @@
 @use './components/header';
 @use './components/footer';
 @use './components/titlesection';
+@use './components/form' as form;
 
 :root{
     --gold-color: #BEAD8E;
@@ -28,6 +29,10 @@ h1{
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -1.44px;
+}
+
+input[type=text]{
+    @include form.text-input;
 }
 
 .square-button{
