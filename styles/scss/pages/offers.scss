@@ -1,5 +1,8 @@
 @use '../styles';
 @use '../components/text';
+@use '../components/room' as room;
+
+
 
 #offer-rooms-section{
     padding: 1.5rem;
@@ -87,5 +90,10 @@
         text-align: center;
         color: white;
         margin-bottom: 2.5rem;
+    }
+
+    .offer-rooms-container{
+        @include room.room(11rem);
+        position:relative;
     }
 }

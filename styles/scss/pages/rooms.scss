@@ -1,2 +1,11 @@
 @use '../styles';
+@use '../components/room' as room;
 
+section{
+    padding: 1rem;
+}
+
+.room-container{
+    @include room.room(11rem);
+    position:relative;
+}

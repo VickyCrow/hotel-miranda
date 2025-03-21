@@ -1,0 +1,53 @@
+@use '../components/text' as text;
+
+
+@mixin room($icon-height){
+    
+    margin-bottom: 2rem;
+
+    background-color: white;
+
+    img{
+        width: 100%;
+    }
+    .room-icons{
+        background-color: white;
+        position:absolute;
+        top: $icon-height;
+        left: calc(50% - 9rem);
+        height: 2rem;
+
+        padding: 0 1rem;
+
+        li{
+            width: 2rem;
+            padding: 0.5rem;
+            display: inline-block;
+        }
+    }
+    .room-description{
+        position: relative;
+        text-align: center;
+
+        h2{
+            font-family: Old Standard TT;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            @include text.lorem;
+            margin-bottom: 2rem;
+        }
+
+        
+        
+        .rectangle{
+            position: absolute;
+            background-color: white;
+            height: 2rem;
+            width: 14rem;
+            top: -4rem;
+        }
+    }
+    
+}
