@@ -10,14 +10,13 @@ header button, header div {
   display: inline-block;
   vertical-align: middle;
 }
+header #navlist {
+  display: none;
+}
 
 #header-button-container {
   position: absolute;
   right: 1rem;
-}
-
-#title-logo-container {
-  width: 60%;
 }
 
 #logo-container {
@@ -242,15 +241,6 @@ footer p {
   --swiper-navigation-color: black;
 }
 
-.swiper-button-prev, .swiper-button-next {
-  position: static !important;
-  display: inline-block !important;
-  background-color: transparent;
-  width: 2rem !important;
-  height: 2rem !important;
-  margin-top: 0 !important;
-}
-
 .dots {
   cursor: default;
   display: inline-block;
@@ -265,8 +255,30 @@ footer p {
 }
 
 #pagination-container {
-  width: 100%;
   text-align: center;
+  position: relative;
+}
+#pagination-container .swiper-button-prev, #pagination-container .swiper-button-next {
+  position: absolute;
+  display: inline-block !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  margin-top: 0 !important;
+  top: 0;
+  background-size: 0.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#pagination-container .swiper-button-prev {
+  left: 2rem !important;
+  background-image: url("../../../img/rooms/left-arrow.png");
+}
+#pagination-container .swiper-button-next {
+  right: 2rem !important;
+  background-image: url("../../../img/rooms/right-arrow.png");
+}
+#pagination-container .swiper-button-prev::after, #pagination-container .swiper-button-next::after {
+  content: "" !important;
 }
 
 :root {
@@ -372,32 +384,19 @@ section {
 
 .room-container {
   margin-bottom: 2rem;
-  position: relative;
+  background-color: white;
 }
 .room-container img {
   width: 100%;
 }
-.room-container .room-icons {
-  background-color: white;
-  position: absolute;
-  top: 11rem;
-  left: calc(50% - 9rem);
-  height: 2rem;
-  padding: 0 1rem;
-}
-.room-container .room-icons li {
-  width: 2rem;
-  padding: 0.5rem;
-  display: inline-block;
-}
 .room-container .room-description {
-  position: relative;
   text-align: center;
+  position: relative;
+  width: fit-content;
+  padding-top: 2rem;
 }
-.room-container .room-description h2 {
+.room-container .room-description .room__name {
   font-family: Old Standard TT;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
 }
 .room-container .room-description p {
   font-family: Roboto;
@@ -407,6 +406,19 @@ section {
   letter-spacing: 0px;
   color: var(--grey-color);
   margin-bottom: 2rem;
+}
+.room-container .room-description .room-icons {
+  background-color: white;
+  position: absolute;
+  top: -1rem;
+  left: calc(50% - 9rem);
+  height: 2rem;
+  padding: 0 1rem;
+}
+.room-container .room-description .room-icons li {
+  width: 2rem;
+  padding: 0.5rem;
+  display: inline-block;
 }
 .room-container .room-description .rectangle {
   position: absolute;
