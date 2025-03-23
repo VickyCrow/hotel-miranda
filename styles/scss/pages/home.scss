@@ -1,1 +1,13 @@
 @use '../styles';
+
+#title-section{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    h3{
+        margin-bottom: 2rem;
+    }
+    button{
+        margin-bottom: 1.5rem;
+    }
+}

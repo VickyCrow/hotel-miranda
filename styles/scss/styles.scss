@@ -73,3 +73,12 @@ input[type=text]{
     width: 70%;
     padding: 1rem;
 }
+
+.dark-rectangle-button{
+    @include b.gold-button;
+    background-color: transparent;
+    border: solid 1px var(--grey-color);
+    color: var(--grey-color);
+    width: 70%;
+    padding: 1rem;
+}
