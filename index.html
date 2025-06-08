@@ -44,11 +44,11 @@
         
     </header>
     <main>
-        <section id="title-section" class="dark-background">
-            <h3 id="ultimate-luxury-h">THE ULTIMATE LUXURY EXPERIENCE</h3>
-            <h1 id="base-h">The Perfect Base For You</h1>
-            <button class="light-rectangle-button">TAKE A TOUR</button>
-            <button class="dark-rectangle-button"> LEARN MORE</button>
+        <section class="dark-background title">
+            <h3 id="ultimate-luxury-h" class="title__second-header">THE ULTIMATE LUXURY EXPERIENCE</h3>
+            <h1 id="base-h" class="title__header">The Perfect Base For You</h1>
+            <button class="light-rectangle-button title__button">TAKE A TOUR</button>
+            <button class="dark-rectangle-button title__button"> LEARN MORE</button>
         </section>
         <section id="book-check-section">
             <form action="" id="book-check-form">
@@ -59,34 +59,30 @@
                 <button id="book-check-submit" class="light-rectangle-button">CHECK AVAILABILITY</button>
             </form>
         </section>
-        <section id="about-section">
-            <div>
-                <h4 class="mini-title-h">ABOUT US</h4>
-                <h1>Discover Our Underground.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, reprehenderit voluptate deserunt eius accusamus quas. Blanditiis exercitationem ducimus quae sequi consectetur minima iste, fuga neque tempore! Explicabo doloribus fugiat non?</p>
-                <button id="about-book-button"><a href="./pages/rooms.html">BOOK NOW</a></button>
+        <section class="about">
+            <div class="about__discover">
+                <h4 class="mini-title-h about__discover__second-header">ABOUT US</h4>
+                <h1 class="about__discover__header">Discover Our Underground.</h1>
+                <p class="about__discover__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, reprehenderit voluptate deserunt eius accusamus quas. Blanditiis exercitationem ducimus quae sequi consectetur minima iste, fuga neque tempore! Explicabo doloribus fugiat non?</p>
+                <button class="about__discover__button light-rectangle-button"><a class="about__discover__button__anchor" href="./pages/rooms.html">BOOK NOW</a></button>
             </div>
-            <div>
-                <div class="about-container">
-                    <img src="" alt="" class="about-img"/>
+            <div class="about__team">
+                <img src="./img/home/Rectangle 14.png" alt="" class="about__team__image"/>
+                <div class="about__team__strong">
+                    <img src="./img/home/svg-gobbler - 2022-03-01T200745.428 1.png" alt=""  class="about__team__icon"/>
+                    <h3 class="about__team__strong__header">Strong Team</h3>
+                    <p class="about__team__strong__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, soluta. </p>
                 </div>
-                <div class="about-container">
-                    <img src="" alt=""  class="about-icon"/>
-                    <h3>Strong Team</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, soluta. Quisquam tempora sit quos dolorum. Doloremque, animi veritatis. Minus nemo cumque assumenda similique omnis ut magnam, ratione debitis quaerat. Nesciunt?</p>
-                </div>
-                <div class="about-container">
-                    <img src="" alt="" class="about-img"/>
-                </div>
-                <div class="about-container">
-                    <img src="" alt="" class="about-icon">
-                    <h3>Strong Team</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, soluta. Quisquam tempora sit quos dolorum. Doloremque, animi veritatis. Minus nemo cumque assumenda similique omnis ut magnam, ratione debitis quaerat. Nesciunt?</p>
+                <img src="./img/home/Rectangle 14.png" alt="" class="about__team__image"/>
+                <div class="about__team__luxury dark-background">
+                    <img src="./img/home/svg-gobbler - 2022-03-01T201407.985 1.png" alt="" class="about__team__icon">
+                    <h3 class="about__team__luxury__header">Luxury Room</h3>
+                    <p class="about__team__luxury__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, soluta.</p>
                 </div>
             </div>
 
         </section>
-        <section id="rooms-section">
+        <section class="rooms">
             <h4 class="mini-title-h">ABOUT US</h4>
             <h1>Hand Picked Rooms</h1>
             <div class="swiper">
@@ -432,61 +428,64 @@
                 </div>
             </div>
         </section>
-        <section id="intro-video-section" class="dark-background">
-            <h4 class="mini-title-h">INTRO VIDEO</h4>
-            <h1>Meet With Our Luxury Place.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio assumenda, pariatur facere est cum vel. Magni suscipit doloribus aliquid neque ipsum dicta, numquam quibusdam ratione veniam impedit eum, aliquam illo.</p>
-            <video src=""></video>
-            <button class="light-rectangle-button">BOOK NOW</button>
+        <section class="dark-background intro">
+            <h4 class="mini-title-dark">INTRO VIDEO</h4>
+            <h1 class="intro__header">Meet With Our Luxury Place.</h1>
+            <p class="intro__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio assumenda, pariatur facere est cum vel. Magni suscipit doloribus aliquid neque ipsum dicta, numquam quibusdam ratione veniam impedit eum, aliquam illo.</p>
+            <video class="intro__video" src=""></video>
+            <button class="light-rectangle-button intro__button">BOOK NOW</button>
         </section>
-        <section id="facilities-section">
+        <section class="facilities">
             <h4 class="mini-title-h">FACILITIES</h4>
-            <h1>Core Features</h1>
-            <div id="facilities-slider-container">
-                <img src="" alt=""/>
-                <h1>01</h1>
-                <h2>Have High Rating</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, perspiciatis sit? Fugit autem, natus, distinctio odio magnam earum maxime unde iusto eligendi dolorum inventore nostrum amet aliquam veniam, ullam quae!</p>
+            <h1 class="facilities__header">Core Features</h1>
+            <div class="facilities__slider">
+                <img src="./img/home/icon 1.png" alt=""/>
+                <h1 class="facilities__number">01</h1>
+                <h2 class="facilities__title">Have High Rating</h2>
+                <p class="facilities__paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, perspiciatis sit? </p>
             </div>
         </section>
-        <section id="menu-section">
-            <img src="" alt=""/>
+        <section class="menu">
+            <img class="menu__donut"src="./img/home/icon 4.png" alt=""/>
             <h4 class="mini-title-h">MENU</h4>
             <h1>Our Foods Menu</h1>
-            <div id="menu-dishes-container">
-                <div class="menu-dish-container">
-                    <img src="" alt=""/>
-                    <div class="menu-description-container">
-                        <h4>Eggs & Bacon</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia natus laudantium ratione nesciunt laboriosam repudiandae voluptatem sapiente ad perspiciatis illo quo unde labore ipsum velit amet quod repellat, sequi quisquam.</p>
+            <div class="menu__dishes">
+                <div class="menu__dish">
+                    <img class="menu__dish__img" src="./img/home/Rectangle 38.png" alt=""/>
+                    <div class="menu__dish__container">
+                        <h4 class="menu__dish__title">Eggs & Bacon</h4>
+                        <p class="menu__dish__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                     </div>
+                    
                 </div>
-                <div class="menu-dish-container">
-                    <img src="" alt=""/>
-                    <div class="menu-description-container">
-                        <h4>Tea or Coffee</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia natus laudantium ratione nesciunt laboriosam repudiandae voluptatem sapiente ad perspiciatis illo quo unde labore ipsum velit amet quod repellat, sequi quisquam.</p>
+                <div class="menu__dish">
+                    <img class="menu__dish__img" src="./img/home/Rectangle 38.png" alt=""/>
+                    <div class="menu__dish__container">
+                        <h4 class="menu__dish__title">Eggs & Bacon</h4>
+                        <p class="menu__dish__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                     </div>
+                    
                 </div>
-                <div class="menu-dish-container">
-                    <img src="" alt=""/>
-                    <div class="menu-description-container">
-                        <h4>Chia Oatmeal</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia natus laudantium ratione nesciunt laboriosam repudiandae voluptatem sapiente ad perspiciatis illo quo unde labore ipsum velit amet quod repellat, sequi quisquam.</p>
+                <div class="menu__dish">
+                    <img class="menu__dish__img" src="./img/home/Rectangle 38.png" alt=""/>
+                    <div class="menu__dish__container">
+                        <h4 class="menu__dish__title">Eggs & Bacon</h4>
+                        <p class="menu__dish__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                     </div>
+                    
                 </div>
             </div>
-            <div id="menu-buttons-container">
-                <button id="menu-left-button"></button>
-                <button id="menu-right-button"></button>
+            <div class="menu__buttons">
+                <button class="menu__buttons__left square-button">left</button>
+                <button class="menu__buttons__right square-button">right</button>
             </div>
         </section>
         <!-- SLIDER SIN SECCIÓN APARENTE-->
-        <section id="data-section" class="dark-background">
-            <div id="data-container">
-                <img src="" alt=""/>
-                <h2>84k</h2><p>+</p>
-                <p>Projects are Completed</p>
+        <section  class="dark-background data">
+            <div id="data__container">
+                <img class="data__img" src="./img/home/icon 5.svg" alt=""/>
+                <h2 class="data__title">84k</h2><p class="data__plus">+</p>
+                <p class="data__desc">Projects are Completed</p>
             </div>
             <div id="data-container">
                 <img src="" alt=""/>

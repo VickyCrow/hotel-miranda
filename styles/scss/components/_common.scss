@@ -45,7 +45,16 @@ input[type=text]{
     letter-spacing: 2.8px;
     text-transform: uppercase;
     color: var(--grey-color);
+}
 
+.mini-title-dark{
+    font-family: Archivo;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color:var(--gold-color);
 }
 
 .light-rectangle-button{

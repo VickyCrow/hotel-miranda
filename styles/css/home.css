@@ -281,23 +281,6 @@ footer p {
   content: "" !important;
 }
 
-:root {
-  --gold-color: #BEAD8E;
-  --pink-color: #DE5777;
-  --grey-color: #777777;
-  --dark-color: #333333;
-}
-
-html, * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  min-width: 320px;
-}
-
 h1 {
   font-family: Old Standard TT;
   font-weight: 400;
@@ -364,6 +347,16 @@ input[type=text] {
   color: var(--grey-color);
 }
 
+.mini-title-dark {
+  font-family: Archivo;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: var(--gold-color);
+}
+
 .light-rectangle-button {
   background-color: var(--gold-color);
   font-family: Archivo;
@@ -395,15 +388,255 @@ input[type=text] {
   padding: 1rem;
 }
 
-#title-section {
+.room-container {
+  margin-bottom: 2rem;
+  background-color: white;
+}
+.room-container img {
+  width: 100%;
+}
+.room-container .room-description {
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  padding-top: 2rem;
+}
+.room-container .room-description .room__name {
+  font-family: Old Standard TT;
+}
+.room-container .room-description p {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: var(--grey-color);
+  margin-bottom: 2rem;
+}
+.room-container .room-description .room-icons {
+  background-color: white;
+  position: absolute;
+  top: -1rem;
+  left: calc(50% - 9rem);
+  height: 2rem;
+  padding: 0 1rem;
+}
+.room-container .room-description .room-icons li {
+  width: 2rem;
+  padding: 0.5rem;
+  display: inline-block;
+}
+.room-container .room-description .rectangle {
+  position: absolute;
+  background-color: white;
+  height: 2rem;
+  width: 14rem;
+  top: -4rem;
+}
+
+:root {
+  --gold-color: #BEAD8E;
+  --pink-color: #DE5777;
+  --grey-color: #777777;
+  --dark-color: #333333;
+}
+
+html, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+section {
+  padding: 1rem;
+}
+
+.title {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-#title-section h3 {
+.title__second-header, .title__header {
+  color: white;
+}
+.title__second-header {
   margin-bottom: 2rem;
 }
-#title-section button {
+.title__header {
+  margin-bottom: 2rem;
+}
+.title__button {
   margin-bottom: 1.5rem;
+}
+
+.about__discover {
+  padding-top: 5rem;
+}
+.about__discover__second-header {
+  margin-bottom: 2rem;
+}
+.about__discover__header {
+  font-size: 56px;
+  margin-bottom: 2rem;
+}
+.about__discover__paragraph {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: var(--grey-color);
+}
+.about__discover__button__anchor {
+  color: white;
+  text-decoration: none;
+}
+.about__team {
+  padding: 2rem;
+}
+.about__team__image {
+  width: 100%;
+}
+.about__team__strong, .about__team__luxury {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.about__team__strong__header, .about__team__luxury__header {
+  font-family: Old Standard TT;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.9px;
+  margin-bottom: 1rem;
+}
+.about__team__luxury__header, .about__team__luxury__paragraph {
+  color: white;
+}
+
+.rooms {
+  text-align: center;
+}
+
+.intro {
+  padding-top: 3rem;
+}
+.intro__header {
+  color: white;
+}
+.intro__paragraph {
+  color: var(--grey-color);
+}
+
+.facilities__number {
+  font-family: Archivo;
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 130px;
+  letter-spacing: 0px;
+  display: inline-block;
+  margin-left: 20%;
+}
+.facilities_title {
+  font-family: Old Standard TT;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.9px;
+  display: inline-block;
+  margin-right: auto;
+}
+.facilities__paragraph {
+  font-family: Archivo;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: var(--grey-color);
+}
+
+.menu {
+  padding-top: 7rem;
+  position: relative;
+}
+.menu__donut {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.menu__dishes {
+  margin-top: 3rem;
+}
+.menu__dish {
+  margin-bottom: 2rem;
+}
+.menu__dish__img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.menu__dish__container {
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 50%;
+}
+.menu__dish__title {
+  font-family: Old Standard TT;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.72px;
+}
+.menu__dish__desc {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+.menu__buttons {
+  position: relative;
+  text-align: end;
+}
+.menu__buttons__left {
+  background-color: #F8F8F8;
+}
+.menu__buttons__right {
+  background-color: var(--gold-color);
+  color: white;
+}
+
+.data {
+  text-align: center;
+  padding-top: 3rem;
+}
+.data__title {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 136%;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.data__plus, .data__title {
+  color: white;
+}
+.data__plus, .data__desc {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 136%;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.data__plus {
+  display: inline-block;
+}
+.data__desc {
+  color: var(--grey-color);
 }
 
 /*# sourceMappingURL=home.css.map */
