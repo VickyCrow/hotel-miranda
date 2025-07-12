@@ -1,9 +1,36 @@
 @use '../styles';
 @use '../components/text' as text;
+@use '../components/form' as form;
+@use '../components/room' as rooms;
 
 
 section{
     padding: 1rem;
+}
+
+.book{
+    background-color: var(--black-color);
+
+    &__label{
+        color: white;
+        font-family: Roboto;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0px;
+
+    }
+
+    &__input{
+        @include form.date-input;
+        background-color: var(--black-color);
+        border: none;
+        border-bottom: var(--gold-color) solid 1px;
+        color: white;
+        
+    }
+
 }
 
 .title{
@@ -39,12 +66,13 @@ section{
 
 
         &__header{
-            font-size: 56px;
+            font-size: 48px;
             margin-bottom: 2rem;
         }
 
         &__paragraph{
             @include text.lorem;
+            margin-bottom: 2rem;
         }
 
         &__button{
@@ -89,20 +117,91 @@ section{
 }
 
 .rooms{
+    padding: 1rem 0;
     text-align: center;
+    @include rooms.room(-12rem);
+
+    .swiper-button{
+        position: absolute;
+        top: 25%;
+    }
+
+    .swiper-button-prev{
+        // left: calc(auto - 2rem) !important;
+        left: 0 !important;
+        background-image: url("../../../img/rooms/chevron-back-outline.svg");
+        background-size: 1rem;
+        
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #F8F8F8;
+        width: 2rem;
+        height: 2rem;
+
+    }
+    .swiper-button-next{
+        // right: auto!important;
+        right: 0 !important;
+        background-image: url("../../../img/rooms/chevron-forward-outline.svg");
+        background-size: 1rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #F8F8F8;
+        width: 2rem;
+        height: 2rem;
+
+
+    }
+
+    .swiper-button-prev::after, .swiper-button-next::after{
+        content: "" !important;
+        
+    }
 }
 .intro{
     padding-top: 3rem;
 
+
+    &__title{
+        margin-bottom: 2rem;
+    }
+
     &__header{
         color: white;
+        font-size: 56px;
+        margin-bottom: 2rem;
+
+
     }
     &__paragraph{
-        color: var(--grey-color);
+        color: var(--light-grey-color);
+        font-family: Archivo;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        margin-bottom: 2rem;
+
+    }
+
+    &__button{
+        margin-top: 2rem;
     }
 }
 
 .facilities{
+
+    text-align: center;
+
+    &__section-title{
+        margin-bottom: 2rem;
+    }
+
+    &__header{
+        font-size: 56px;
+    }
+
     &__number{
         font-family: Archivo;
         font-weight: 700;
@@ -113,7 +212,7 @@ section{
         margin-left: 20%;
     }
 
-    &_title{
+    &__title{
         font-family: Old Standard TT;
         font-weight: 400;
         font-size: 30px;
@@ -122,6 +221,7 @@ section{
 
         display:inline-block;
         margin-right: auto;
+        margin-bottom: 2rem;
     }
 
     &__paragraph{
@@ -136,6 +236,7 @@ section{
 }
 
 .menu{
+
 
     padding-top: 7rem;
     position:relative;
@@ -157,7 +258,6 @@ section{
         &__img{
             display:inline-block;
             vertical-align: middle;
-
         }
         &__container{
             vertical-align: middle;
@@ -202,6 +302,10 @@ section{
 
     text-align: center;
     padding-top: 3rem;
+
+    &__container{
+        margin-bottom: 5rem;
+    }
 
     &__title{
         font-family: Roboto;

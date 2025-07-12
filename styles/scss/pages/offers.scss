@@ -19,9 +19,7 @@
         
 
 
-        img{
-            width: 100%;
-        }
+        
 
         p{
             position: absolute;
@@ -78,7 +76,7 @@
 
 }
 
-#popular-rooms-section{
+.popular-rooms{
     padding: 2rem;
 
     .mini-title-h{
@@ -95,5 +93,19 @@
     .offer-rooms-container{
         @include room.room(11rem);
         position:relative;
+    }
+
+    .room{
+        &__iconlist{
+
+            &__item{
+                display: inline-block;
+            }
+
+            &__img{
+                width: 1fr;
+
+            }
+        }
     }
 }

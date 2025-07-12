@@ -29,6 +29,10 @@ input[type=text]{
     background-color: var(--dark-color);
 }
 
+.black-background{
+    background-color: var(--black-color);
+}
+
 .yellow-price{
     @include text.price(var(--gold-color));
 }

@@ -7,12 +7,14 @@
 
     background-color: white;
 
-    img{
+    .room-image{
         width: 100%;
+        height: auto;
     }
     
     .room-description{
         text-align: center;
+        justify-content: center;
         position: relative;
         width: fit-content;
         padding-top: 2rem;
@@ -31,9 +33,9 @@
             top: $icon-height;
             left: calc(50% - 9rem);
             height: 2rem;
-            padding: 0 1rem;
-    
+            margin: 0 1rem;
             li{
+                
                 width: 2rem;
                 padding: 0.5rem;
                 display: inline-block;

@@ -347,6 +347,16 @@ input[type=text] {
   color: var(--grey-color);
 }
 
+.mini-title-dark {
+  font-family: Archivo;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: var(--gold-color);
+}
+
 .light-rectangle-button {
   background-color: var(--gold-color);
   font-family: Archivo;
@@ -451,9 +461,6 @@ body {
 #offer-rooms-section .room-price-container {
   width: 100%;
   position: relative;
-}
-#offer-rooms-section .room-price-container img {
-  width: 100%;
 }
 #offer-rooms-section .room-price-container p {
   position: absolute;
