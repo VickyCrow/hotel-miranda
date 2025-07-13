@@ -12,11 +12,11 @@
         height: auto;
     }
     
-    .room-description{
+    .rooms__description{
         text-align: center;
         justify-content: center;
         position: relative;
-        width: fit-content;
+        left: 2rem;
         padding-top: 2rem;
 
         .room__name{

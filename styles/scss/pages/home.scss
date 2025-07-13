@@ -10,6 +10,7 @@ section{
 
 .book{
     background-color: var(--black-color);
+    padding-bottom: 3rem;
 
     &__label{
         color: white;
@@ -34,8 +35,8 @@ section{
 }
 
 .title{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
     &__second-header , &__header{
         color: white;
@@ -58,7 +59,7 @@ section{
 .about{
     &__discover{
 
-        padding-top: 5rem;
+        padding-top: 3rem;
 
         &__second-header{
             margin-bottom: 2rem;
@@ -121,9 +122,21 @@ section{
     text-align: center;
     @include rooms.room(-12rem);
 
+    &__title{
+        background-color: #F8F8F8;
+        top: -1rem;
+    }
+
+    &__description{
+        position:absolute;
+        top: -3rem;
+        background-color: #F8F8F8;
+        width: 80%;
+    }
+
     .swiper-button{
         position: absolute;
-        top: 25%;
+        top: 35%;
     }
 
     .swiper-button-prev{
@@ -149,8 +162,6 @@ section{
         background-color: #F8F8F8;
         width: 2rem;
         height: 2rem;
-
-
     }
 
     .swiper-button-prev::after, .swiper-button-next::after{

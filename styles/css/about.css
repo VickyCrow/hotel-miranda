@@ -385,16 +385,16 @@ input[type=text] {
 .room-container img {
   width: 100%;
 }
-.room-container .room-description {
+.room-container .rooms__description {
   text-align: center;
   position: relative;
   width: fit-content;
   padding-top: 2rem;
 }
-.room-container .room-description .room__name {
+.room-container .rooms__description .room__name {
   font-family: Old Standard TT;
 }
-.room-container .room-description p {
+.room-container .rooms__description p {
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
@@ -403,7 +403,7 @@ input[type=text] {
   color: var(--grey-color);
   margin-bottom: 2rem;
 }
-.room-container .room-description .room-icons {
+.room-container .rooms__description .room-icons {
   background-color: white;
   position: absolute;
   top: -1rem;
@@ -411,12 +411,12 @@ input[type=text] {
   height: 2rem;
   padding: 0 1rem;
 }
-.room-container .room-description .room-icons li {
+.room-container .rooms__description .room-icons li {
   width: 2rem;
   padding: 0.5rem;
   display: inline-block;
 }
-.room-container .room-description .rectangle {
+.room-container .rooms__description .rectangle {
   position: absolute;
   background-color: white;
   height: 2rem;
