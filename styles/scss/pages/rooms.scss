@@ -4,8 +4,6 @@
 section{
     padding: 1rem;
 }
-
 .room-container{
-    @include room.room(11rem);
-    position:relative;
+    @include room.room(-1rem);
 }

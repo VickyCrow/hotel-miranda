@@ -1,0 +1,81 @@
+@use './room' as room;
+
+@use './buttons' as b;
+@use './text' as text;
+@use './form' as form;
+
+
+h1{
+    font-family: Old Standard TT;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+}
+
+input[type=text]{
+    @include form.text-input;
+}
+
+.square-button{
+    @include b.square;
+}
+
+.dark-span{
+    font-weight: 700;
+}
+
+.dark-background{
+    background-color: var(--dark-color);
+}
+
+.black-background{
+    background-color: var(--black-color);
+}
+
+.yellow-price{
+    @include text.price(var(--gold-color));
+}
+
+.pink-price{
+    @include text.price(var(--pink-color));
+}
+
+.mini-title-h{
+    font-family: Archivo;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: var(--grey-color);
+}
+
+.mini-title-dark{
+    font-family: Archivo;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color:var(--gold-color);
+}
+
+.light-rectangle-button{
+    @include b.gold-button;
+    width: 70%;
+    padding: 1rem;
+}
+
+.dark-rectangle-button{
+    @include b.gold-button;
+    background-color: transparent;
+    border: solid 1px var(--grey-color);
+    color: var(--grey-color);
+    width: 70%;
+    padding: 1rem;
+}
+
+.room-container{
+    @include room.room(-1rem);
+}

@@ -7,40 +7,42 @@
 
     background-color: white;
 
-    img{
+    .room-image{
         width: 100%;
+        height: auto;
     }
-    .room-icons{
-        background-color: white;
-        position:absolute;
-        top: $icon-height;
-        left: calc(50% - 9rem);
-        height: 2rem;
-
-        padding: 0 1rem;
-
-        li{
-            width: 2rem;
-            padding: 0.5rem;
-            display: inline-block;
-        }
-    }
-    .room-description{
-        position: relative;
+    
+    .rooms__description{
         text-align: center;
+        justify-content: center;
+        position: relative;
+        left: 2rem;
+        padding-top: 2rem;
 
-        h2{
+        .room__name{
             font-family: Old Standard TT;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
         }
         p{
             @include text.lorem;
             margin-bottom: 2rem;
         }
 
-        
-        
+        .room-icons{
+            background-color: white;
+            position:absolute;
+            top: $icon-height;
+            left: calc(50% - 9rem);
+            height: 2rem;
+            margin: 0 1rem;
+            li{
+                
+                width: 2rem;
+                padding: 0.5rem;
+                display: inline-block;
+            }
+        }
+
+    
         .rectangle{
             position: absolute;
             background-color: white;
@@ -50,4 +52,5 @@
         }
     }
     
+
 }
