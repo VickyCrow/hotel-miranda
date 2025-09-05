@@ -3,7 +3,6 @@ document.getElementById('burguer-menu').addEventListener('click', toggleNav);
 function toggleNav(){
     const navList = document.getElementById('navlist');
     const header = document.querySelector('header');
-    const burguer = document.getElementById('burguer-menu');
 
     if(navList.style.display === "none" || navList.style.display === ""){
         navList.style.display = "grid";

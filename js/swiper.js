@@ -15,11 +15,11 @@ const swiper = new Swiper('.swiper', {
       // },
       renderCustom: function (swiper, current, total) {
         
-        var text = "<ul>";
-        var leftdots = false;
-        var rightdots = false;
+        let text = "<ul>";
+        let leftdots = false;
+        let rightdots = false;
 
-        var tripledotsHTML = `<li class="dots">...</li>`;
+        const tripledotsHTML = `<li class="dots">...</li>`;
         for (let i = 1; i <= total; i++) {
           if (current == i) {
             text += `<li class="swiper-pagination-bullet active">${i}</li>`;

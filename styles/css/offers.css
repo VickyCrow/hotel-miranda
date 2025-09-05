@@ -317,6 +317,10 @@ input[type=text] {
   background-color: var(--dark-color);
 }
 
+.black-background {
+  background-color: var(--black-color);
+}
+
 .yellow-price {
   font-family: Archivo;
   font-weight: 700;
@@ -392,13 +396,15 @@ input[type=text] {
   margin-bottom: 2rem;
   background-color: white;
 }
-.room-container img {
+.room-container .room-image {
   width: 100%;
+  height: auto;
 }
 .room-container .rooms__description {
   text-align: center;
+  justify-content: center;
   position: relative;
-  width: fit-content;
+  left: 2rem;
   padding-top: 2rem;
 }
 .room-container .rooms__description .room__name {
@@ -419,7 +425,7 @@ input[type=text] {
   top: -1rem;
   left: calc(50% - 9rem);
   height: 2rem;
-  padding: 0 1rem;
+  margin: 0 1rem;
 }
 .room-container .rooms__description .room-icons li {
   width: 2rem;
@@ -437,8 +443,10 @@ input[type=text] {
 :root {
   --gold-color: #BEAD8E;
   --pink-color: #DE5777;
+  --light-grey-color: #C2C2C2;
   --grey-color: #777777;
   --dark-color: #333333;
+  --black-color: #222222;
 }
 
 html, * {
@@ -458,9 +466,15 @@ body {
   margin-bottom: 4rem;
   width: 100%;
 }
+#offer-rooms-section .room-container img {
+  width: 100%;
+}
 #offer-rooms-section .room-price-container {
   width: 100%;
   position: relative;
+}
+#offer-rooms-section .room-price-container img {
+  width: 100%;
 }
 #offer-rooms-section .room-price-container p {
   position: absolute;
@@ -510,36 +524,38 @@ body {
   line-height: 1rem;
 }
 
-#popular-rooms-section {
+.popular-rooms {
   padding: 2rem;
 }
-#popular-rooms-section .mini-title-h {
+.popular-rooms .mini-title-h {
   text-align: center;
   color: var(--gold-color);
 }
-#popular-rooms-section h1 {
+.popular-rooms h1 {
   text-align: center;
   color: white;
   margin-bottom: 2.5rem;
 }
-#popular-rooms-section .offer-rooms-container {
+.popular-rooms .offer-rooms-container {
   margin-bottom: 2rem;
   background-color: white;
   position: relative;
 }
-#popular-rooms-section .offer-rooms-container img {
+.popular-rooms .offer-rooms-container .room-image {
   width: 100%;
+  height: auto;
 }
-#popular-rooms-section .offer-rooms-container .rooms__description {
+.popular-rooms .offer-rooms-container .rooms__description {
   text-align: center;
+  justify-content: center;
   position: relative;
-  width: fit-content;
+  left: 2rem;
   padding-top: 2rem;
 }
-#popular-rooms-section .offer-rooms-container .rooms__description .room__name {
+.popular-rooms .offer-rooms-container .rooms__description .room__name {
   font-family: Old Standard TT;
 }
-#popular-rooms-section .offer-rooms-container .rooms__description p {
+.popular-rooms .offer-rooms-container .rooms__description p {
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
@@ -548,25 +564,45 @@ body {
   color: var(--grey-color);
   margin-bottom: 2rem;
 }
-#popular-rooms-section .offer-rooms-container .rooms__description .room-icons {
+.popular-rooms .offer-rooms-container .rooms__description .room-icons {
   background-color: white;
   position: absolute;
   top: 11rem;
   left: calc(50% - 9rem);
   height: 2rem;
-  padding: 0 1rem;
+  margin: 0 1rem;
 }
-#popular-rooms-section .offer-rooms-container .rooms__description .room-icons li {
+.popular-rooms .offer-rooms-container .rooms__description .room-icons li {
   width: 2rem;
   padding: 0.5rem;
   display: inline-block;
 }
-#popular-rooms-section .offer-rooms-container .rooms__description .rectangle {
+.popular-rooms .offer-rooms-container .rooms__description .rectangle {
   position: absolute;
   background-color: white;
   height: 2rem;
   width: 14rem;
   top: -4rem;
+}
+.popular-rooms .room__iconlist__item {
+  display: inline-block;
+}
+.popular-rooms .room__iconlist__img {
+  width: 1fr;
+}
+.popular-rooms .rooms__description {
+  left: 0;
+}
+.popular-rooms .room-icons {
+  margin: 0 0.5rem !important;
+  left: calc(50% - 7.5rem) !important;
+}
+.popular-rooms .room-icons li {
+  padding: 0 !important;
+  width: 1.8rem !important;
+}
+.popular-rooms .room-container {
+  padding-bottom: 2rem;
 }
 
 /*# sourceMappingURL=offers.css.map */

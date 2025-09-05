@@ -10,6 +10,10 @@
     .room-container{
         margin-bottom: 4rem;
         width: 100%;
+
+        img{
+            width: 100%;
+        }
     }
 
     .room-price-container{
@@ -17,9 +21,9 @@
         
         position: relative;
         
-
-
-        
+        img{
+            width: 100%;
+        }
 
         p{
             position: absolute;
@@ -95,6 +99,7 @@
         position:relative;
     }
 
+
     .room{
         &__iconlist{
 
@@ -107,5 +112,26 @@
 
             }
         }
+
+        
+    }
+
+    .rooms{
+        &__description{
+            left: 0;
+        }
+    }
+
+    .room-icons{
+        margin:  0 0.5rem !important;
+        left: calc(50% - 7.5rem) !important;
+        li{
+            padding: 0 !important;
+            width: 1.8rem !important;
+        }
+    }
+
+    .room-container{
+        padding-bottom: 2rem;
     }
 }
