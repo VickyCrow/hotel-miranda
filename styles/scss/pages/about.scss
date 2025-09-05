@@ -22,16 +22,12 @@ section{
 
 #services-section{
 
-    justify-content: center;
-
     .service-container{
-        @include button.square;
-        width: 7rem;
+        width: 49%;
         height: 7rem;
         display: inline-block;
         color: black;
         text-align: center;
-        margin: auto;
 
         h4{
             font-family: Archivo;

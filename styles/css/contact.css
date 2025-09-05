@@ -317,6 +317,10 @@ input[type=text] {
   background-color: var(--dark-color);
 }
 
+.black-background {
+  background-color: var(--black-color);
+}
+
 .yellow-price {
   font-family: Archivo;
   font-weight: 700;
@@ -345,6 +349,16 @@ input[type=text] {
   letter-spacing: 2.8px;
   text-transform: uppercase;
   color: var(--grey-color);
+}
+
+.mini-title-dark {
+  font-family: Archivo;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: var(--gold-color);
 }
 
 .light-rectangle-button {
@@ -382,13 +396,15 @@ input[type=text] {
   margin-bottom: 2rem;
   background-color: white;
 }
-.room-container img {
+.room-container .room-image {
   width: 100%;
+  height: auto;
 }
 .room-container .rooms__description {
   text-align: center;
+  justify-content: center;
   position: relative;
-  width: fit-content;
+  left: 2rem;
   padding-top: 2rem;
 }
 .room-container .rooms__description .room__name {
@@ -409,7 +425,7 @@ input[type=text] {
   top: -1rem;
   left: calc(50% - 9rem);
   height: 2rem;
-  padding: 0 1rem;
+  margin: 0 1rem;
 }
 .room-container .rooms__description .room-icons li {
   width: 2rem;
@@ -427,8 +443,10 @@ input[type=text] {
 :root {
   --gold-color: #BEAD8E;
   --pink-color: #DE5777;
+  --light-grey-color: #C2C2C2;
   --grey-color: #777777;
   --dark-color: #333333;
+  --black-color: #222222;
 }
 
 html, * {
@@ -494,8 +512,14 @@ body {
   margin-bottom: 3rem;
 }
 #form-section input, #form-section textarea {
-  background: url(../../../img/contacts/agenda-icon.png) no-repeat scroll 2px 2px #F8F8F8;
-  padding: 1rem;
+  background: url(../../../img/contacts/agenda-icon.png) no-repeat scroll 0.4rem 1rem #F8F8F8;
+  padding: 1.5rem;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: var(--grey-color);
 }
 #form-section input {
   height: 3rem;
@@ -503,6 +527,9 @@ body {
 #form-section textarea {
   height: 9rem;
   padding-top: 1rem;
+  border: none;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=contact.css.map */
