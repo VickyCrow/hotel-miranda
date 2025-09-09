@@ -16,7 +16,6 @@
         text-align: center;
         justify-content: center;
         position: relative;
-        left: 2rem;
         padding-top: 2rem;
 
         .room__name{
@@ -27,12 +26,13 @@
             margin-bottom: 2rem;
         }
 
+
         .room-icons{
             background-color: white;
             position:absolute;
             top: $icon-height;
-            left: calc(50% - 9rem);
-            height: 2rem;
+            // left: calc(50% - 9rem);
+            // height: 2rem;
             margin: 0 1rem;
             li{
                 

@@ -404,7 +404,6 @@ input[type=text] {
   text-align: center;
   justify-content: center;
   position: relative;
-  width: fit-content;
   padding-top: 2rem;
 }
 .room-container .rooms__description .room__name {
@@ -423,8 +422,6 @@ input[type=text] {
   background-color: white;
   position: absolute;
   top: -1rem;
-  left: calc(50% - 9rem);
-  height: 2rem;
   margin: 0 1rem;
 }
 .room-container .rooms__description .room-icons li {
@@ -561,6 +558,7 @@ section {
   text-align: center;
   margin-bottom: 2rem;
   background-color: white;
+  margin-bottom: 0;
 }
 .rooms .room-image {
   width: 100%;
@@ -570,7 +568,6 @@ section {
   text-align: center;
   justify-content: center;
   position: relative;
-  width: fit-content;
   padding-top: 2rem;
 }
 .rooms .rooms__description .room__name {
@@ -588,9 +585,7 @@ section {
 .rooms .rooms__description .room-icons {
   background-color: white;
   position: absolute;
-  top: -12rem;
-  left: calc(50% - 9rem);
-  height: 2rem;
+  top: -9rem;
   margin: 0 1rem;
 }
 .rooms .rooms__description .room-icons li {
@@ -612,8 +607,15 @@ section {
 .rooms__description {
   position: absolute;
   top: -3rem;
-  background-color: #F8F8F8;
-  width: 80%;
+  background-color: #FFF;
+  left: 5%;
+  width: 90%;
+  justify-content: center;
+  padding-top: 1rem !important;
+}
+.rooms .room-icons {
+  width: 100%;
+  margin: 0 !important;
 }
 .rooms .swiper-button {
   position: absolute;
@@ -671,6 +673,22 @@ section {
 .facilities {
   text-align: center;
 }
+.facilities > div {
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.facilities > div > ul {
+  display: flex;
+  flex-direction: row;
+  width: calc(3rem + 600%);
+  gap: 1rem;
+}
+.facilities > div > ul > li {
+  display: block;
+  scroll-snap-align: center;
+  width: 100%;
+}
 .facilities__section-title {
   margin-bottom: 2rem;
 }
@@ -716,6 +734,51 @@ section {
 }
 .menu__dishes {
   margin-top: 3rem;
+}
+.menu__dishes > ul {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  flex-direction: row;
+  gap: 1rem;
+  anchor-name: --my-carousel;
+}
+.menu__dishes > ul > li {
+  display: block;
+  scroll-snap-align: center;
+  flex: 0 0 100%;
+}
+.menu__dishes ul::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+.menu__dishes ul::scroll-button(*):hover,
+.menu__dishes ul::scroll-button(*):focus {
+  opacity: 1;
+}
+.menu__dishes ul::scroll-button(*):active {
+  translate: 1px 1px;
+}
+.menu__dishes ul::scroll-button(*):disabled {
+  opacity: 0.5;
+  cursor: unset;
+}
+.menu__dishes ul::scroll-button(left) {
+  content: "◄";
+  left: calc(anchor(right) - 80px);
+  bottom: calc(anchor(bottom));
+}
+.menu__dishes ul::scroll-button(right) {
+  content: "►";
+  right: calc(anchor(right));
+  bottom: calc(anchor(bottom));
 }
 .menu__dish {
   margin-bottom: 2rem;
