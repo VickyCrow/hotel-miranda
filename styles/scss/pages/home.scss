@@ -288,6 +288,65 @@ section{
 
     &__dishes{
         margin-top: 3rem;
+
+        
+
+        & > ul{
+
+            display: flex;
+            width:100%;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            flex-direction: row;
+            gap: 1rem;
+
+            anchor-name: --my-carousel;
+
+            & > li {
+                display: block;
+                scroll-snap-align: center;
+                flex: 0 0 100%;
+            }
+        }
+
+        ul::scroll-button(*) {
+            border: 0;
+            font-size: 2rem;
+            background: none;
+            color: black;
+            opacity: 0.7;
+            cursor: pointer;
+            position: absolute;
+            position-anchor: --my-carousel;
+        }
+
+        ul::scroll-button(*):hover,
+        ul::scroll-button(*):focus {
+            opacity: 1;
+        }
+
+        ul::scroll-button(*):active {
+            translate: 1px 1px;
+        }
+
+        ul::scroll-button(*):disabled {
+            opacity: 0.5;
+            cursor: unset;
+        }
+
+        ul::scroll-button(left) {
+            content: "◄";
+            left: calc(anchor(right) - 80px);
+            bottom: calc(anchor(bottom));
+
+        }
+
+        ul::scroll-button(right) {
+            content: "►";
+            right: calc(anchor(right));
+            bottom: calc(anchor(bottom));
+
+        }
     }
 
     &__dish{
