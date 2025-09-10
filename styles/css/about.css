@@ -404,7 +404,6 @@ input[type=text] {
   text-align: center;
   justify-content: center;
   position: relative;
-  left: 2rem;
   padding-top: 2rem;
 }
 .room-container .rooms__description .room__name {
@@ -423,8 +422,6 @@ input[type=text] {
   background-color: white;
   position: absolute;
   top: -1rem;
-  left: calc(50% - 9rem);
-  height: 2rem;
   margin: 0 1rem;
 }
 .room-container .rooms__description .room-icons li {
@@ -507,11 +504,57 @@ section > h4, section h1 {
   color: var(--grey-color);
 }
 
-#facilities-section {
+.facilities {
   text-align: center;
 }
-#facilities-section h4, #facilities-section h1 {
-  color: white;
+.facilities > div {
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.facilities > div > ul {
+  display: flex;
+  flex-direction: row;
+  width: calc(3rem + 600%);
+  gap: 1rem;
+}
+.facilities > div > ul > li {
+  display: block;
+  scroll-snap-align: center;
+  width: 100%;
+}
+.facilities__section-title {
+  margin-bottom: 2rem;
+}
+.facilities__header {
+  font-size: 48px;
+}
+.facilities__number {
+  font-family: Archivo;
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 130px;
+  letter-spacing: 0px;
+  display: inline-block;
+  margin-left: 20%;
+}
+.facilities__title {
+  font-family: Old Standard TT;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.9px;
+  display: inline-block;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+.facilities__paragraph {
+  font-family: Archivo;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: var(--grey-color);
 }
 
 #counter-section .fun-fact-container {

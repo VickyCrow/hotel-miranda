@@ -55,10 +55,65 @@ section{
     }
 }
 
-#facilities-section{
+.facilities{
     text-align: center;
-    h4, h1{
-        color: white;
+
+    & > div {
+        width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+
+        & > ul {
+            display: flex;
+            flex-direction: row;
+            width: calc(3rem + 600%);
+            gap: 1rem;
+            & > li {
+                display: block;
+                scroll-snap-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+    &__section-title{
+        margin-bottom: 2rem;
+    }
+
+    &__header{
+        font-size: 48px;
+    }
+
+    &__number{
+        font-family: Archivo;
+        font-weight: 700;
+        font-size: 120px;
+        line-height: 130px;
+        letter-spacing: 0px;
+        display:inline-block;
+        margin-left: 20%;
+    }
+
+    &__title{
+        font-family: Old Standard TT;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: -0.9px;
+
+        display:inline-block;
+        margin-right: auto;
+        margin-bottom: 2rem;
+    }
+
+    &__paragraph{
+        font-family: Archivo;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        color: var(--grey-color)
+
     }
 }
 
