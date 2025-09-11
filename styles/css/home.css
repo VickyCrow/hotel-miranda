@@ -135,6 +135,17 @@ footer p {
   margin-bottom: 1rem;
 }
 
+@media screen and (width >= 600px) {
+  footer {
+    display: grid;
+    grid: auto-flow/1fr 1fr 1fr 1fr 100%;
+  }
+  #copyright-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
 #title-section {
   padding: 2rem 2rem 0 2rem;
   color: white;

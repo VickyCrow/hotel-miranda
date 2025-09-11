@@ -56,7 +56,7 @@ footer{
     margin-bottom: 3rem;
 }
 
-#footer-container{
+#icon-container{
     button{
         @include buttons.square;
         display:inline-block;
@@ -116,5 +116,50 @@ footer{
     
 }
 
+@media screen and (width >= 600px){
 
+    footer{
+        display: grid;
+        grid-template-areas:
+        ". title services contact ."
+        "copyright copyright copyright copyright copyright";
+        grid-template-columns: auto 300px  minmax(150px, 40%) 250px auto;
+        padding: 1rem 0 0 0;
+        justify-content: center;
+        bottom: 0;
+
+        & > div{
+            padding: 0 1rem;
+        }
+
+    }
+
+    #footer-title{
+        grid-area: title;
+        margin: 0;
+
+        & > p{
+            text-wrap: "wrap";
+        }
+    }
+
+    #services-container{
+        grid-area:services;
+    }
+
+    #contact-container{
+        grid-area: contact;
+    }
+
+    #copyright-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        grid-area: copyright;
+        padding: 2rem 0;
+        & > p{
+            margin: 0;
+        }
+    }
+}
 
