@@ -9,13 +9,46 @@ header{
     font-weight: 400;
 
 
-    button,div{
+    button,div, nav , details{
         display:inline-block;
         vertical-align: middle;
     }
 
-    #navlist{
-        display: none;
+    details{
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        & > summary::marker {
+            content: url('../../../img/header/burguer.png');
+        }
+
+        &[open] > summary::marker {
+            content: url('../../../img/header/burguer.png');
+        }
+
+        & > ul {
+            list-style: none;
+
+            & > li > a {
+                text-decoration: none;
+                color: black;
+            }
+
+            & > li > a:hover{
+                color: black;
+            }
+        }
+
+    }
+
+    nav{
+        margin-left: 3rem;
+        & > ul > li{
+            display:inline-block;
+        }
+
     }
 
 }
@@ -39,8 +72,18 @@ header{
     }
 }
 
-@media screen and (width >= 600px){
-    
+@media screen and (width >= 1000px){
+    details{
+        display: none;
+    }
+
+    nav{
+        & > ul {
+            & > li {
+                
+            }
+        }
+    }
 }
 
 

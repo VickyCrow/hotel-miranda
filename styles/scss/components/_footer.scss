@@ -116,14 +116,14 @@ footer{
     
 }
 
-@media screen and (width >= 1000px){
+@media screen and (width >= 900px){
 
     footer{
         display: grid;
         grid-template-areas:
         ". title services contact ."
         "copyright copyright copyright copyright copyright";
-        grid-template-columns: auto 300px  400px 250px auto;
+        grid-template-columns: auto 300px  minmax(300px , 350px) 240px auto;
         padding-top: 5rem;
         justify-content: center;
         bottom: 0;

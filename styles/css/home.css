@@ -6,12 +6,34 @@ header {
   font-family: Archivo;
   font-weight: 400;
 }
-header button, header div {
+header button, header div, header nav, header details {
   display: inline-block;
   vertical-align: middle;
 }
-header #navlist {
-  display: none;
+header details:hover {
+  cursor: pointer;
+}
+header details > summary::marker {
+  content: url("../../../img/header/burguer.png");
+}
+header details[open] > summary::marker {
+  content: url("../../../img/header/burguer.png");
+}
+header details > ul {
+  list-style: none;
+}
+header details > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+header details > ul > li > a:hover {
+  color: black;
+}
+header nav {
+  margin-left: 3rem;
+}
+header nav > ul > li {
+  display: inline-block;
 }
 
 #header-button-container {
@@ -31,6 +53,11 @@ header #navlist {
   vertical-align: middle;
 }
 
+@media screen and (width >= 1000px) {
+  details {
+    display: none;
+  }
+}
 footer {
   padding: 1rem;
   background-image: url("../../../img/footer/Rectángulo 2 1.png");
@@ -134,11 +161,11 @@ footer p {
   margin-bottom: 1rem;
 }
 
-@media screen and (width >= 1000px) {
+@media screen and (width >= 900px) {
   footer {
     display: grid;
     grid-template-areas: ". title services contact ." "copyright copyright copyright copyright copyright";
-    grid-template-columns: auto 300px 400px 250px auto;
+    grid-template-columns: auto 300px minmax(300px, 400px) 240px auto;
     padding-top: 5rem;
     justify-content: center;
     bottom: 0;
