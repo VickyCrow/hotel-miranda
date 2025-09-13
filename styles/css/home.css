@@ -87,7 +87,7 @@ footer p {
   margin-bottom: 3rem;
 }
 
-#footer-container button {
+#icon-container button {
   width: 2rem;
   height: 2rem;
   background-color: white;
@@ -95,15 +95,14 @@ footer p {
   display: inline-block;
   padding: 0.25rem;
 }
-#footer-container button:hover {
+#icon-container button:hover {
   background-color: var(--gold-color);
 }
-#footer-container button img {
+#icon-container button img {
   width: 1.5rem;
 }
 
 #services-container .column {
-  height: 100%;
   width: 47%;
   display: inline-block;
   vertical-align: top;
@@ -135,15 +134,40 @@ footer p {
   margin-bottom: 1rem;
 }
 
-@media screen and (width >= 600px) {
+@media screen and (width >= 1000px) {
   footer {
     display: grid;
-    grid: auto-flow/1fr 1fr 1fr 1fr 100%;
+    grid-template-areas: ". title services contact ." "copyright copyright copyright copyright copyright";
+    grid-template-columns: auto 300px 400px 250px auto;
+    padding-top: 5rem;
+    justify-content: center;
+    bottom: 0;
+  }
+  footer > div {
+    padding: 0 1rem;
+  }
+  #footer-title {
+    grid-area: title;
+    margin: 0;
+  }
+  #footer-title > p {
+    text-wrap: "wrap";
+  }
+  #services-container {
+    grid-area: services;
+  }
+  #contact-container {
+    grid-area: contact;
   }
   #copyright-container {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    grid-area: copyright;
+    padding: 2rem 0;
+  }
+  #copyright-container > p {
+    margin: 0;
   }
 }
 #title-section {

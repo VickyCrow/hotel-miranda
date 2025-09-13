@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "sass --watch styles/scss/pages:styles/css"
+  },
   "dependencies": {
     "sass": "^1.85.1",
     "swiper": "^11.2.5"
