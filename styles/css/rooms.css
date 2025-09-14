@@ -6,7 +6,7 @@ header {
   font-family: Archivo;
   font-weight: 400;
 }
-header button, header div, header nav, header details {
+header button, header div, header details {
   display: inline-block;
   vertical-align: middle;
 }
@@ -30,10 +30,7 @@ header details > ul > li > a:hover {
   color: black;
 }
 header nav {
-  margin-left: 3rem;
-}
-header nav > ul > li {
-  display: inline-block;
+  display: none;
 }
 
 #header-button-container {
@@ -54,8 +51,21 @@ header nav > ul > li {
 }
 
 @media screen and (width >= 1000px) {
-  details {
-    display: none;
+  header details > summary::marker {
+    content: none;
+  }
+  header nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3rem;
+  }
+  header nav > ul > li {
+    list-style: none;
+    display: inline-block;
+  }
+  header nav > ul > li > a {
+    text-decoration: none;
+    color: black;
   }
 }
 footer {
@@ -165,7 +175,7 @@ footer p {
   footer {
     display: grid;
     grid-template-areas: ". title services contact ." "copyright copyright copyright copyright copyright";
-    grid-template-columns: auto 300px minmax(300px, 400px) 240px auto;
+    grid-template-columns: auto 300px minmax(300px, 350px) 240px auto;
     padding-top: 5rem;
     justify-content: center;
     bottom: 0;
