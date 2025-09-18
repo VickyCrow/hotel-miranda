@@ -1,0 +1,143 @@
+@charset "UTF-8";
+footer {
+  padding: 1rem;
+  background-image: url("../../../img/footer/Rectángulo 2 1.png");
+}
+footer h4 {
+  font-family: Old Standard TT !important;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 3rem 0;
+}
+footer .light-square {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border: none;
+  background-color: var(--gold-color);
+  font-family: Archivo;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  padding: calc(2.5rem - 20px);
+  display: inline-block;
+}
+footer .light-square h1 {
+  font-family: Archivo;
+  font-size: 40px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+footer h3 {
+  font-family: Archivo;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: 1.5rem;
+  font-size: 24px;
+}
+footer p {
+  font-family: Archivo;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #777777;
+}
+
+#footer-title {
+  margin-bottom: 3rem;
+}
+
+#icon-container button {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border: none;
+  display: inline-block;
+  padding: 0.25rem;
+}
+#icon-container button:hover {
+  background-color: var(--gold-color);
+}
+#icon-container button img {
+  width: 1.5rem;
+}
+
+#services-container .column {
+  height: 100%;
+  width: 47%;
+  display: inline-block;
+  vertical-align: top;
+  top: 0;
+}
+#services-container .column p {
+  line-height: 48px;
+}
+
+#contact-container div {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+#contact-container div h4 {
+  margin: 0 !important;
+}
+
+#copyright-container {
+  background-color: #F8F8F8;
+  padding-top: 1rem;
+}
+#copyright-container p {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.48px;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+@media screen and (width >= 600px) {
+  footer {
+    display: grid;
+    grid-template-areas: ". title services contact ." "copyright copyright copyright copyright copyright";
+    grid-template-columns: auto 300px minmax(150px, 40%) 155px auto;
+    padding: 1rem 0 0 0;
+    justify-content: center;
+    bottom: 0;
+  }
+  footer > div {
+    padding: 0 1rem;
+  }
+  #footer-title {
+    grid-area: title;
+    margin: 0;
+  }
+  #footer-title > p {
+    text-wrap: "wrap";
+  }
+  #services-container {
+    grid-area: services;
+  }
+  #contact-container {
+    grid-area: contact;
+  }
+  #copyright-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    grid-area: copyright;
+    padding: 2rem 0;
+  }
+  #copyright-container > p {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

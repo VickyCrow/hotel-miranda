@@ -1,16 +1,39 @@
 @charset "UTF-8";
-header {
+header > p {
+  display: none;
+}
+header > div {
   width: 100%;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
   padding: 1rem;
   font-family: Archivo;
   font-weight: 400;
+  background-color: white;
 }
-header button, header div {
+header > div button, header > div div, header > div details {
   display: inline-block;
   vertical-align: middle;
 }
-header #navlist {
+header > div details:hover {
+  cursor: pointer;
+}
+header > div details > summary::marker {
+  content: url("../../../img/header/burguer.png");
+}
+header > div details[open] > summary::marker {
+  content: url("../../../img/header/burguer.png");
+}
+header > div details > ul {
+  list-style: none;
+}
+header > div details > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+header > div details > ul > li > a:hover {
+  color: black;
+}
+header > div nav {
   display: none;
 }
 
@@ -31,6 +54,52 @@ header #navlist {
   vertical-align: middle;
 }
 
+@media screen and (width >= 1000px) {
+  header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+  }
+  header > p {
+    display: block;
+    color: white;
+    position: absolute;
+    left: 20%;
+    top: 0.5rem;
+  }
+  header > div {
+    min-width: 60%;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+  }
+  header > div details > summary::marker {
+    content: none;
+  }
+  header > div nav {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-left: 3rem;
+  }
+  header > div nav > ul > li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 1rem;
+  }
+  header > div nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+  }
+  header > div #header-button-container {
+    position: relative;
+    justify-self: end;
+  }
+}
 footer {
   padding: 1rem;
   background-image: url("../../../img/footer/Rectángulo 2 1.png");
@@ -87,7 +156,7 @@ footer p {
   margin-bottom: 3rem;
 }
 
-#footer-container button {
+#icon-container button {
   width: 2rem;
   height: 2rem;
   background-color: white;
@@ -95,15 +164,14 @@ footer p {
   display: inline-block;
   padding: 0.25rem;
 }
-#footer-container button:hover {
+#icon-container button:hover {
   background-color: var(--gold-color);
 }
-#footer-container button img {
+#icon-container button img {
   width: 1.5rem;
 }
 
 #services-container .column {
-  height: 100%;
   width: 47%;
   display: inline-block;
   vertical-align: top;
@@ -135,6 +203,42 @@ footer p {
   margin-bottom: 1rem;
 }
 
+@media screen and (width >= 900px) {
+  footer {
+    display: grid;
+    grid-template-areas: ". title services contact ." "copyright copyright copyright copyright copyright";
+    grid-template-columns: auto 300px minmax(300px, 350px) 240px auto;
+    padding-top: 5rem;
+    justify-content: center;
+    bottom: 0;
+  }
+  footer > div {
+    padding: 0 1rem;
+  }
+  #footer-title {
+    grid-area: title;
+    margin: 0;
+  }
+  #footer-title > p {
+    text-wrap: "wrap";
+  }
+  #services-container {
+    grid-area: services;
+  }
+  #contact-container {
+    grid-area: contact;
+  }
+  #copyright-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    grid-area: copyright;
+    padding: 2rem 0;
+  }
+  #copyright-container > p {
+    margin: 0;
+  }
+}
 #title-section {
   padding: 2rem 2rem 0 2rem;
   color: white;
@@ -404,7 +508,6 @@ input[type=text] {
   text-align: center;
   justify-content: center;
   position: relative;
-  left: 2rem;
   padding-top: 2rem;
 }
 .room-container .rooms__description .room__name {
@@ -423,8 +526,6 @@ input[type=text] {
   background-color: white;
   position: absolute;
   top: -1rem;
-  left: calc(50% - 9rem);
-  height: 2rem;
   margin: 0 1rem;
 }
 .room-container .rooms__description .room-icons li {
@@ -513,7 +614,6 @@ body {
   color: var(--grey-color);
 }
 #offer-rooms-section .column {
-  height: 100%;
   width: 47%;
   display: inline-block;
   vertical-align: top;
@@ -549,7 +649,6 @@ body {
   text-align: center;
   justify-content: center;
   position: relative;
-  left: 2rem;
   padding-top: 2rem;
 }
 .popular-rooms .offer-rooms-container .rooms__description .room__name {
@@ -568,8 +667,6 @@ body {
   background-color: white;
   position: absolute;
   top: 11rem;
-  left: calc(50% - 9rem);
-  height: 2rem;
   margin: 0 1rem;
 }
 .popular-rooms .offer-rooms-container .rooms__description .room-icons li {
