@@ -1,35 +1,39 @@
 @charset "UTF-8";
-header {
+header > p {
+  display: none;
+}
+header > div {
   width: 100%;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
   padding: 1rem;
   font-family: Archivo;
   font-weight: 400;
+  background-color: white;
 }
-header button, header div, header details {
+header > div button, header > div div, header > div details {
   display: inline-block;
   vertical-align: middle;
 }
-header details:hover {
+header > div details:hover {
   cursor: pointer;
 }
-header details > summary::marker {
+header > div details > summary::marker {
   content: url("../../../img/header/burguer.png");
 }
-header details[open] > summary::marker {
+header > div details[open] > summary::marker {
   content: url("../../../img/header/burguer.png");
 }
-header details > ul {
+header > div details > ul {
   list-style: none;
 }
-header details > ul > li > a {
+header > div details > ul > li > a {
   text-decoration: none;
   color: black;
 }
-header details > ul > li > a:hover {
+header > div details > ul > li > a:hover {
   color: black;
 }
-header nav {
+header > div nav {
   display: none;
 }
 
@@ -51,21 +55,49 @@ header nav {
 }
 
 @media screen and (width >= 1000px) {
-  header details > summary::marker {
+  header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+  }
+  header > p {
+    display: block;
+    color: white;
+    position: absolute;
+    left: 20%;
+    top: 0.5rem;
+  }
+  header > div {
+    min-width: 60%;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+  }
+  header > div details > summary::marker {
     content: none;
   }
-  header nav {
-    display: inline-block;
+  header > div nav {
+    display: flex;
+    align-items: center;
     vertical-align: middle;
     margin-left: 3rem;
   }
-  header nav > ul > li {
+  header > div nav > ul > li {
     list-style: none;
     display: inline-block;
+    margin: 0 1rem;
   }
-  header nav > ul > li > a {
+  header > div nav > ul > li > a {
     text-decoration: none;
     color: black;
+  }
+  header > div #header-button-container {
+    position: relative;
+    justify-self: end;
   }
 }
 footer {
