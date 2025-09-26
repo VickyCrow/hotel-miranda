@@ -8,6 +8,28 @@ section{
     padding: 1rem;
 }
 
+.title{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &__second-header , &__header{
+        color: white;
+    }
+
+    &__second-header{
+        
+        margin-bottom: 2rem;
+    }
+
+    &__header{
+        margin-bottom: 2rem;
+    }
+
+    &__button{
+        margin-bottom: 1.5rem;
+    }
+}
+
 .book{
     background-color: var(--black-color);
     padding-bottom: 3rem;
@@ -32,28 +54,6 @@ section{
         
     }
 
-}
-
-.title{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-
-    &__second-header , &__header{
-        color: white;
-    }
-
-    &__second-header{
-        
-        margin-bottom: 2rem;
-    }
-
-    &__header{
-        margin-bottom: 2rem;
-    }
-
-    &__button{
-        margin-bottom: 1.5rem;
-    }
 }
 
 .about{
@@ -435,5 +435,59 @@ section{
 
     &__desc{
         color: var(--grey-color)
+    }
+}
+
+@media screen and (width >= 1000px){
+    .title{
+
+        padding: 5rem 20%;
+
+        &__header{
+            font-size: 120px;
+            line-height: 120px;
+        }
+
+        &__button{
+            width: 25%;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+    }
+
+    .book{
+        padding: 2rem 15% 2rem 20%;
+        
+        
+        &__form{
+            display: grid;
+            gap: 0 2rem;
+
+            grid-template-areas:
+            "label1 label2 . ."
+            "input1 input2 . button";
+
+            grid-template-columns: 25% 25% auto 35%;
+
+            & > input{
+                margin: 0;
+            }
+
+            #arrival-input{
+                grid-area: input1;
+            }
+
+            #departure-input{
+                grid-area: input2;
+            }
+
+            & > button {
+                grid-area: button;
+                padding: 1rem;
+            }
+        }
+
+        
     }
 }

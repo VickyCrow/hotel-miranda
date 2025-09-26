@@ -66,11 +66,11 @@ header > div nav {
     display: block;
     color: white;
     position: absolute;
-    left: 20%;
+    left: 15%;
     top: 0.5rem;
   }
   header > div {
-    min-width: 60%;
+    min-width: 70%;
     width: auto;
     display: flex;
     justify-content: space-between;
@@ -564,6 +564,23 @@ section {
   padding: 1rem;
 }
 
+.title {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.title__second-header, .title__header {
+  color: white;
+}
+.title__second-header {
+  margin-bottom: 2rem;
+}
+.title__header {
+  margin-bottom: 2rem;
+}
+.title__button {
+  margin-bottom: 1.5rem;
+}
+
 .book {
   background-color: var(--black-color);
   padding-bottom: 3rem;
@@ -591,23 +608,6 @@ section {
   border: none;
   border-bottom: var(--gold-color) solid 1px;
   color: white;
-}
-
-.title {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-.title__second-header, .title__header {
-  color: white;
-}
-.title__second-header {
-  margin-bottom: 2rem;
-}
-.title__header {
-  margin-bottom: 2rem;
-}
-.title__button {
-  margin-bottom: 1.5rem;
 }
 
 .about__discover {
@@ -953,6 +953,43 @@ section {
 }
 .data__desc {
   color: var(--grey-color);
+}
+
+@media screen and (width >= 1000px) {
+  .title {
+    padding: 5rem 20%;
+  }
+  .title__header {
+    font-size: 120px;
+    line-height: 120px;
+  }
+  .title__button {
+    width: 25%;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .book {
+    padding: 2rem 15% 2rem 20%;
+  }
+  .book__form {
+    display: grid;
+    gap: 0 2rem;
+    grid-template-areas: "label1 label2 . ." "input1 input2 . button";
+    grid-template-columns: 25% 25% auto 35%;
+  }
+  .book__form > input {
+    margin: 0;
+  }
+  .book__form #arrival-input {
+    grid-area: input1;
+  }
+  .book__form #departure-input {
+    grid-area: input2;
+  }
+  .book__form > button {
+    grid-area: button;
+    padding: 1rem;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */
