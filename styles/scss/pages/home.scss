@@ -57,9 +57,14 @@ section{
 }
 
 .about{
+
+    padding: 2rem;
+    text-align: center;
+
     &__discover{
 
         padding-top: 3rem;
+        text-align: start;
 
         &__second-header{
             margin-bottom: 2rem;
@@ -85,17 +90,33 @@ section{
 
     }
     &__team{
-        padding: 2rem;
+        
+        
 
         &__image{
+
             width: 100%;
+            max-width: 400px;
+            margin-top: 4rem;
         }
 
         &__strong , &__luxury{
+
+
+            max-width: 400px;
             margin-top: 0;
             margin-bottom: 1rem;
-            padding: 3rem 1rem;
+            margin-left: auto;
+            margin-right: auto;
             text-align: center;
+
+            padding: 100px 3rem;
+
+            &__icon{
+                top: auto;
+                vertical-align: middle;
+            }
+
             &__header{
                 font-family: Old Standard TT;
                 font-weight: 400;
@@ -486,6 +507,65 @@ section{
                 grid-area: button;
                 padding: 1rem;
             }
+        }
+
+        
+    }
+
+    .about{
+        display: grid;
+        
+        grid-template-areas: 
+        "team t-image about"
+        "r-image room about";
+
+        &__discover{
+            grid-area: about;
+
+            padding: 2rem;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__team{
+
+            &__image{
+                min-height: auto;
+                margin: 0;
+            }
+
+            #strong-image{
+                grid-area: t-image;
+            }
+
+            #luxury-image{
+                grid-area: r-image;
+            }
+
+            &__strong{
+                margin:0;
+                padding: 0 1rem;
+                min-height: auto;
+                grid-area: team;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__luxury{
+                margin:0;
+                padding: 0 1rem;
+                min-height: auto;
+                grid-area: room;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
         }
 
         

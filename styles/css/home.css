@@ -610,8 +610,13 @@ section {
   color: white;
 }
 
+.about {
+  padding: 2rem;
+  text-align: center;
+}
 .about__discover {
   padding-top: 3rem;
+  text-align: start;
 }
 .about__discover__second-header {
   margin-bottom: 2rem;
@@ -633,17 +638,23 @@ section {
   color: white;
   text-decoration: none;
 }
-.about__team {
-  padding: 2rem;
-}
 .about__team__image {
   width: 100%;
+  max-width: 400px;
+  margin-top: 4rem;
 }
 .about__team__strong, .about__team__luxury {
+  max-width: 400px;
   margin-top: 0;
   margin-bottom: 1rem;
-  padding: 3rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  padding: 100px 3rem;
+}
+.about__team__strong__icon, .about__team__luxury__icon {
+  top: auto;
+  vertical-align: middle;
 }
 .about__team__strong__header, .about__team__luxury__header {
   font-family: Old Standard TT;
@@ -989,6 +1000,47 @@ section {
   .book__form > button {
     grid-area: button;
     padding: 1rem;
+  }
+  .about {
+    display: grid;
+    grid-template-areas: "team t-image about" "r-image room about";
+  }
+  .about__discover {
+    grid-area: about;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about__team__image {
+    min-height: auto;
+    margin: 0;
+  }
+  .about__team #strong-image {
+    grid-area: t-image;
+  }
+  .about__team #luxury-image {
+    grid-area: r-image;
+  }
+  .about__team__strong {
+    margin: 0;
+    padding: 0 1rem;
+    min-height: auto;
+    grid-area: team;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about__team__luxury {
+    margin: 0;
+    padding: 0 1rem;
+    min-height: auto;
+    grid-area: room;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
