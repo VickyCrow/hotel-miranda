@@ -531,20 +531,14 @@ section{
         &__team{
 
             &__image{
+                margin-top: 0;
                 min-height: auto;
-                margin: 0;
             }
 
-            #strong-image{
-                grid-area: t-image;
-            }
-
-            #luxury-image{
-                grid-area: r-image;
-            }
+            
 
             &__strong{
-                margin:0;
+                margin: 0 1rem 0 0;
                 padding: 0 1rem;
                 min-height: auto;
                 grid-area: team;
@@ -555,7 +549,7 @@ section{
             }
 
             &__luxury{
-                margin:0;
+                margin:1rem 0 0 2rem;
                 padding: 0 1rem;
                 min-height: auto;
                 grid-area: room;
@@ -566,6 +560,16 @@ section{
                 justify-content: center;
             }
 
+        }
+
+        #strong-image{
+            grid-area: t-image;
+            margin-left: 1rem;
+        }
+
+        #luxury-image{
+            margin-right: 1rem;
+            grid-area: r-image;
         }
 
         

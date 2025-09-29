@@ -1013,17 +1013,11 @@ section {
     justify-content: center;
   }
   .about__team__image {
+    margin-top: 0;
     min-height: auto;
-    margin: 0;
-  }
-  .about__team #strong-image {
-    grid-area: t-image;
-  }
-  .about__team #luxury-image {
-    grid-area: r-image;
   }
   .about__team__strong {
-    margin: 0;
+    margin: 0 1rem 0 0;
     padding: 0 1rem;
     min-height: auto;
     grid-area: team;
@@ -1033,7 +1027,7 @@ section {
     justify-content: center;
   }
   .about__team__luxury {
-    margin: 0;
+    margin: 1rem 0 0 2rem;
     padding: 0 1rem;
     min-height: auto;
     grid-area: room;
@@ -1041,6 +1035,14 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .about #strong-image {
+    grid-area: t-image;
+    margin-left: 1rem;
+  }
+  .about #luxury-image {
+    margin-right: 1rem;
+    grid-area: r-image;
   }
 }
 
