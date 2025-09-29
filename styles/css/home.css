@@ -784,6 +784,10 @@ section {
 .intro__button {
   margin-top: 2rem;
 }
+.intro__video {
+  width: 250px;
+  height: 200px;
+}
 
 .facilities {
   text-align: center;
@@ -1043,6 +1047,39 @@ section {
   .about #luxury-image {
     margin-right: 1rem;
     grid-area: r-image;
+  }
+  .intro {
+    display: grid;
+    position: relative;
+    padding: 0;
+    grid-template-areas: ". intro . golden" ". meet . golden" ". lorem . golden" ". button . golden";
+    grid-template-columns: auto 30% auto 30%;
+  }
+  .intro__title {
+    grid-area: intro;
+    margin-top: 2rem;
+  }
+  .intro__header {
+    grid-area: meet;
+  }
+  .intro__paragraph {
+    grid-area: lorem;
+  }
+  .intro__button {
+    grid-area: button;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .intro__video {
+    position: absolute;
+    right: 15%;
+    align-self: center;
+    width: 30%;
+    height: 50%;
+  }
+  .intro > .gold-background {
+    background-color: var(--gold-color);
+    grid-area: golden;
   }
 }
 

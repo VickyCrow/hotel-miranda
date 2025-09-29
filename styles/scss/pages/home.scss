@@ -231,6 +231,11 @@ section{
     &__button{
         margin-top: 2rem;
     }
+
+    &__video{
+        width: 250px;
+        height: 200px;
+    }
 }
 
 .facilities{
@@ -573,5 +578,52 @@ section{
         }
 
         
+    }
+
+    .intro{
+
+        display: grid;
+        position: relative;
+
+        padding: 0;
+
+        grid-template-areas:
+        ". intro . golden"
+        ". meet . golden"
+        ". lorem . golden"
+        ". button . golden";
+
+        grid-template-columns: auto 30% auto 30%;
+
+        &__title{
+            grid-area: intro;
+            margin-top: 2rem;
+        }
+
+        &__header{
+            grid-area: meet;
+        }
+        &__paragraph{
+            grid-area: lorem;
+        }
+
+        &__button{
+            grid-area: button;
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+
+        &__video{
+            position: absolute;
+            right: 15%;
+            align-self: center;
+            width: 30%;
+            height: 50%;
+        }
+
+        & > .gold-background{
+            background-color: var(--gold-color);
+            grid-area: golden;
+        }
     }
 }
