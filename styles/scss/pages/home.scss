@@ -618,12 +618,85 @@ section{
             right: 15%;
             align-self: center;
             width: 30%;
+            max-width: 400px;
             height: 50%;
         }
 
         & > .gold-background{
             background-color: var(--gold-color);
             grid-area: golden;
+        }
+    }
+
+    .facilities{
+        text-align: center;
+
+        & > div {
+            width: 100%;
+            overflow:hidden;
+            scroll-snap-type:none;
+
+            & > ul {
+                display: grid;
+                grid-template: 1fr 1fr 1fr / 1fr 1fr;
+                width: 100%;
+
+                & > li {
+                    display: block;
+                    width: auto;
+                    scroll-snap-align:unset;
+                }
+            }
+        }
+    }
+
+    .menu{
+        &__dishes{
+            margin-top: 3rem;
+
+            & > ul{
+
+                display: flex;
+                width:100%;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                flex-direction: row;
+                gap: 1rem;
+
+                anchor-name: --my-carousel;
+
+                & > li {
+                    display: block;
+                    scroll-snap-align: center;
+                    flex: 0 0 45%;
+                }
+            }
+
+            ul::scroll-button(*) {
+                border: 0;
+                font-size: 2rem;
+                background: none;
+                color: black;
+                opacity: 0.7;
+                cursor: pointer;
+                position: absolute;
+                position-anchor: --my-carousel;
+            }
+
+        }
+    }
+
+    .data{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+        margin: 5rem auto;
+        padding: 3rem;
+        gap: 2rem;
+
+        &__container{
+            margin-bottom: 0;
         }
     }
 }
