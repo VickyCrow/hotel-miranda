@@ -638,7 +638,7 @@ section{
 
             & > ul {
                 display: grid;
-                grid-template: 1fr 1fr 1fr / 1fr 1fr;
+                grid-template: 1fr 1fr / 1fr  1fr 1fr;
                 width: 100%;
 
                 & > li {
@@ -668,7 +668,7 @@ section{
                 & > li {
                     display: block;
                     scroll-snap-align: center;
-                    flex: 0 0 45%;
+                    flex: 0 0 50%;
                 }
             }
 

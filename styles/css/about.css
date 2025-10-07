@@ -683,4 +683,65 @@ section > h4, section h1 {
   top: 50%;
 }
 
+@media screen and (width >= 1000px) {
+  section {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }
+  #title-section {
+    padding-top: 5rem;
+  }
+  #services-section {
+    display: flex;
+    flex-direction: row;
+  }
+  #restaurant-section {
+    display: grid;
+    gap: 1rem 2rem;
+    align-items: center;
+    grid-template-areas: "photo s-title" "photo title" "photo lorem" "photo button";
+    grid-template-columns: 60% 1fr;
+  }
+  #restaurant-section > img {
+    grid-area: photo;
+  }
+  #restaurant-section > * {
+    margin: 0;
+  }
+  .facilities {
+    text-align: center;
+  }
+  .facilities > div {
+    width: 100%;
+    overflow: hidden;
+    scroll-snap-type: none;
+  }
+  .facilities > div > ul {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+    width: 100%;
+  }
+  .facilities > div > ul > li {
+    display: block;
+    width: auto;
+    scroll-snap-align: unset;
+  }
+  #counter-section {
+    display: grid;
+    grid-template-areas: "title . ." "fun . ." "facts facts facts";
+  }
+  #counter-section > h4 {
+    grid-area: title;
+  }
+  #counter-section > h1 {
+    grid-area: fun;
+  }
+  #counter-section > div {
+    grid-area: facts;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 /*# sourceMappingURL=about.css.map */

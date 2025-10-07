@@ -1092,7 +1092,7 @@ section {
   }
   .facilities > div > ul {
     display: grid;
-    grid-template: 1fr 1fr 1fr/1fr 1fr;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
     width: 100%;
   }
   .facilities > div > ul > li {
@@ -1115,7 +1115,7 @@ section {
   .menu__dishes > ul > li {
     display: block;
     scroll-snap-align: center;
-    flex: 0 0 45%;
+    flex: 0 0 50%;
   }
   .menu__dishes ul::scroll-button(*) {
     border: 0;
