@@ -66,11 +66,11 @@ header > div nav {
     display: block;
     color: white;
     position: absolute;
-    left: 20%;
+    left: 15%;
     top: 0.5rem;
   }
   header > div {
-    min-width: 60%;
+    min-width: 70%;
     width: auto;
     display: flex;
     justify-content: space-between;
@@ -598,6 +598,9 @@ body {
 #contact-section {
   padding: 1rem;
 }
+#contact-section > img {
+  max-width: 100%;
+}
 
 #image-container {
   width: 100%;
@@ -631,6 +634,36 @@ body {
   border: none;
   width: 100%;
   margin-bottom: 2rem;
+}
+
+@media screen and (width >= 1000px) {
+  section {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }
+  #contact-section {
+    display: grid;
+    grid-template-areas: ". . ." "img img img";
+    grid-template-columns: 3 1fr;
+  }
+  #contact-section > img {
+    grid-area: img;
+    justify-self: center;
+  }
+  #form-section > form {
+    display: grid;
+    grid-template-areas: "name email" "phone subject" "textarea textarea" "button button";
+  }
+  #form-section > form > textarea {
+    grid-area: textarea;
+  }
+  #form-section > form > button {
+    grid-area: button;
+    justify-self: center;
+    width: 30%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=contact.css.map */

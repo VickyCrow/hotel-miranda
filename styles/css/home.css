@@ -66,11 +66,11 @@ header > div nav {
     display: block;
     color: white;
     position: absolute;
-    left: 20%;
+    left: 15%;
     top: 0.5rem;
   }
   header > div {
-    min-width: 60%;
+    min-width: 70%;
     width: auto;
     display: flex;
     justify-content: space-between;
@@ -564,6 +564,23 @@ section {
   padding: 1rem;
 }
 
+.title {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.title__second-header, .title__header {
+  color: white;
+}
+.title__second-header {
+  margin-bottom: 2rem;
+}
+.title__header {
+  margin-bottom: 2rem;
+}
+.title__button {
+  margin-bottom: 1.5rem;
+}
+
 .book {
   background-color: var(--black-color);
   padding-bottom: 3rem;
@@ -593,25 +610,13 @@ section {
   color: white;
 }
 
-.title {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.about {
+  padding: 2rem;
+  text-align: center;
 }
-.title__second-header, .title__header {
-  color: white;
-}
-.title__second-header {
-  margin-bottom: 2rem;
-}
-.title__header {
-  margin-bottom: 2rem;
-}
-.title__button {
-  margin-bottom: 1.5rem;
-}
-
 .about__discover {
   padding-top: 3rem;
+  text-align: start;
 }
 .about__discover__second-header {
   margin-bottom: 2rem;
@@ -633,17 +638,23 @@ section {
   color: white;
   text-decoration: none;
 }
-.about__team {
-  padding: 2rem;
-}
 .about__team__image {
   width: 100%;
+  max-width: 400px;
+  margin-top: 4rem;
 }
 .about__team__strong, .about__team__luxury {
+  max-width: 400px;
   margin-top: 0;
   margin-bottom: 1rem;
-  padding: 3rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  padding: 100px 3rem;
+}
+.about__team__strong__icon, .about__team__luxury__icon {
+  top: auto;
+  vertical-align: middle;
 }
 .about__team__strong__header, .about__team__luxury__header {
   font-family: Old Standard TT;
@@ -772,6 +783,10 @@ section {
 }
 .intro__button {
   margin-top: 2rem;
+}
+.intro__video {
+  width: 250px;
+  height: 200px;
 }
 
 .facilities {
@@ -953,6 +968,177 @@ section {
 }
 .data__desc {
   color: var(--grey-color);
+}
+
+@media screen and (width >= 1000px) {
+  .title {
+    padding: 5rem 20%;
+  }
+  .title__header {
+    font-size: 120px;
+    line-height: 120px;
+  }
+  .title__button {
+    width: 25%;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .book {
+    padding: 2rem 15% 2rem 20%;
+  }
+  .book__form {
+    display: grid;
+    gap: 0 2rem;
+    grid-template-areas: "label1 label2 . ." "input1 input2 . button";
+    grid-template-columns: 25% 25% auto 35%;
+  }
+  .book__form > input {
+    margin: 0;
+  }
+  .book__form #arrival-input {
+    grid-area: input1;
+  }
+  .book__form #departure-input {
+    grid-area: input2;
+  }
+  .book__form > button {
+    grid-area: button;
+    padding: 1rem;
+  }
+  .about {
+    display: grid;
+    grid-template-areas: "team t-image about" "r-image room about";
+  }
+  .about__discover {
+    grid-area: about;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about__team__image {
+    margin-top: 0;
+    min-height: auto;
+  }
+  .about__team__strong {
+    margin: 0 1rem 0 0;
+    padding: 0 1rem;
+    min-height: auto;
+    grid-area: team;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about__team__luxury {
+    margin: 1rem 0 0 2rem;
+    padding: 0 1rem;
+    min-height: auto;
+    grid-area: room;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about #strong-image {
+    grid-area: t-image;
+    margin-left: 1rem;
+  }
+  .about #luxury-image {
+    margin-right: 1rem;
+    grid-area: r-image;
+  }
+  .intro {
+    display: grid;
+    position: relative;
+    padding: 0;
+    grid-template-areas: ". intro . golden" ". meet . golden" ". lorem . golden" ". button . golden";
+    grid-template-columns: auto 30% auto 30%;
+  }
+  .intro__title {
+    grid-area: intro;
+    margin-top: 2rem;
+  }
+  .intro__header {
+    grid-area: meet;
+  }
+  .intro__paragraph {
+    grid-area: lorem;
+  }
+  .intro__button {
+    grid-area: button;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .intro__video {
+    position: absolute;
+    right: 15%;
+    align-self: center;
+    width: 30%;
+    max-width: 400px;
+    height: 50%;
+  }
+  .intro > .gold-background {
+    background-color: var(--gold-color);
+    grid-area: golden;
+  }
+  .facilities {
+    text-align: center;
+  }
+  .facilities > div {
+    width: 100%;
+    overflow: hidden;
+    scroll-snap-type: none;
+  }
+  .facilities > div > ul {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+    width: 100%;
+  }
+  .facilities > div > ul > li {
+    display: block;
+    width: auto;
+    scroll-snap-align: unset;
+  }
+  .menu__dishes {
+    margin-top: 3rem;
+  }
+  .menu__dishes > ul {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    flex-direction: row;
+    gap: 1rem;
+    anchor-name: --my-carousel;
+  }
+  .menu__dishes > ul > li {
+    display: block;
+    scroll-snap-align: center;
+    flex: 0 0 50%;
+  }
+  .menu__dishes ul::scroll-button(*) {
+    border: 0;
+    font-size: 2rem;
+    background: none;
+    color: black;
+    opacity: 0.7;
+    cursor: pointer;
+    position: absolute;
+    position-anchor: --my-carousel;
+  }
+  .data {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    margin: 5rem auto;
+    padding: 3rem;
+    gap: 2rem;
+  }
+  .data__container {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */

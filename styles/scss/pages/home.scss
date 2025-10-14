@@ -8,6 +8,28 @@ section{
     padding: 1rem;
 }
 
+.title{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &__second-header , &__header{
+        color: white;
+    }
+
+    &__second-header{
+        
+        margin-bottom: 2rem;
+    }
+
+    &__header{
+        margin-bottom: 2rem;
+    }
+
+    &__button{
+        margin-bottom: 1.5rem;
+    }
+}
+
 .book{
     background-color: var(--black-color);
     padding-bottom: 3rem;
@@ -34,32 +56,15 @@ section{
 
 }
 
-.title{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-
-    &__second-header , &__header{
-        color: white;
-    }
-
-    &__second-header{
-        
-        margin-bottom: 2rem;
-    }
-
-    &__header{
-        margin-bottom: 2rem;
-    }
-
-    &__button{
-        margin-bottom: 1.5rem;
-    }
-}
-
 .about{
+
+    padding: 2rem;
+    text-align: center;
+
     &__discover{
 
         padding-top: 3rem;
+        text-align: start;
 
         &__second-header{
             margin-bottom: 2rem;
@@ -85,17 +90,33 @@ section{
 
     }
     &__team{
-        padding: 2rem;
+        
+        
 
         &__image{
+
             width: 100%;
+            max-width: 400px;
+            margin-top: 4rem;
         }
 
         &__strong , &__luxury{
+
+
+            max-width: 400px;
             margin-top: 0;
             margin-bottom: 1rem;
-            padding: 3rem 1rem;
+            margin-left: auto;
+            margin-right: auto;
             text-align: center;
+
+            padding: 100px 3rem;
+
+            &__icon{
+                top: auto;
+                vertical-align: middle;
+            }
+
             &__header{
                 font-family: Old Standard TT;
                 font-weight: 400;
@@ -209,6 +230,11 @@ section{
 
     &__button{
         margin-top: 2rem;
+    }
+
+    &__video{
+        width: 250px;
+        height: 200px;
     }
 }
 
@@ -435,5 +461,242 @@ section{
 
     &__desc{
         color: var(--grey-color)
+    }
+}
+
+@media screen and (width >= 1000px){
+    .title{
+
+        padding: 5rem 20%;
+
+        &__header{
+            font-size: 120px;
+            line-height: 120px;
+        }
+
+        &__button{
+            width: 25%;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+    }
+
+    .book{
+        padding: 2rem 15% 2rem 20%;
+        
+        
+        &__form{
+            display: grid;
+            gap: 0 2rem;
+
+            grid-template-areas:
+            "label1 label2 . ."
+            "input1 input2 . button";
+
+            grid-template-columns: 25% 25% auto 35%;
+
+            & > input{
+                margin: 0;
+            }
+
+            #arrival-input{
+                grid-area: input1;
+            }
+
+            #departure-input{
+                grid-area: input2;
+            }
+
+            & > button {
+                grid-area: button;
+                padding: 1rem;
+            }
+        }
+
+        
+    }
+
+    .about{
+        display: grid;
+        
+        grid-template-areas: 
+        "team t-image about"
+        "r-image room about";
+
+        &__discover{
+            grid-area: about;
+
+            padding: 2rem;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__team{
+
+            &__image{
+                margin-top: 0;
+                min-height: auto;
+            }
+
+            
+
+            &__strong{
+                margin: 0 1rem 0 0;
+                padding: 0 1rem;
+                min-height: auto;
+                grid-area: team;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__luxury{
+                margin:1rem 0 0 2rem;
+                padding: 0 1rem;
+                min-height: auto;
+                grid-area: room;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+
+        #strong-image{
+            grid-area: t-image;
+            margin-left: 1rem;
+        }
+
+        #luxury-image{
+            margin-right: 1rem;
+            grid-area: r-image;
+        }
+
+        
+    }
+
+    .intro{
+
+        display: grid;
+        position: relative;
+
+        padding: 0;
+
+        grid-template-areas:
+        ". intro . golden"
+        ". meet . golden"
+        ". lorem . golden"
+        ". button . golden";
+
+        grid-template-columns: auto 30% auto 30%;
+
+        &__title{
+            grid-area: intro;
+            margin-top: 2rem;
+        }
+
+        &__header{
+            grid-area: meet;
+        }
+        &__paragraph{
+            grid-area: lorem;
+        }
+
+        &__button{
+            grid-area: button;
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+
+        &__video{
+            position: absolute;
+            right: 15%;
+            align-self: center;
+            width: 30%;
+            max-width: 400px;
+            height: 50%;
+        }
+
+        & > .gold-background{
+            background-color: var(--gold-color);
+            grid-area: golden;
+        }
+    }
+
+    .facilities{
+        text-align: center;
+
+        & > div {
+            width: 100%;
+            overflow:hidden;
+            scroll-snap-type:none;
+
+            & > ul {
+                display: grid;
+                grid-template: 1fr 1fr / 1fr  1fr 1fr;
+                width: 100%;
+
+                & > li {
+                    display: block;
+                    width: auto;
+                    scroll-snap-align:unset;
+                }
+            }
+        }
+    }
+
+    .menu{
+        &__dishes{
+            margin-top: 3rem;
+
+            & > ul{
+
+                display: flex;
+                width:100%;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                flex-direction: row;
+                gap: 1rem;
+
+                anchor-name: --my-carousel;
+
+                & > li {
+                    display: block;
+                    scroll-snap-align: center;
+                    flex: 0 0 50%;
+                }
+            }
+
+            ul::scroll-button(*) {
+                border: 0;
+                font-size: 2rem;
+                background: none;
+                color: black;
+                opacity: 0.7;
+                cursor: pointer;
+                position: absolute;
+                position-anchor: --my-carousel;
+            }
+
+        }
+    }
+
+    .data{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+        margin: 5rem auto;
+        padding: 3rem;
+        gap: 2rem;
+
+        &__container{
+            margin-bottom: 0;
+        }
     }
 }
