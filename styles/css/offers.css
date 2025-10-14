@@ -702,4 +702,43 @@ body {
   padding-bottom: 2rem;
 }
 
+@media screen and (width >= 1000px) {
+  section {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }
+  .room-details {
+    display: grid;
+    grid-template: "title4 . price" "title . price" "lorem column1 column2" "button . .";
+    gap: 0 1rem;
+    grid-template-columns: auto 20% 20%;
+  }
+  .room-details > h4 {
+    grid-area: title4;
+  }
+  .room-details > h1 {
+    grid-area: title;
+  }
+  .room-details > p {
+    grid-area: lorem;
+  }
+  .room-details .column {
+    width: 100% !important;
+  }
+  .room-details .column1 {
+    grid-area: column1;
+  }
+  .room-details .column2 {
+    grid-area: column2;
+  }
+  .room-details > button {
+    grid-area: button;
+    width: 50%;
+  }
+  .room-details .room-price-container {
+    position: relative;
+    grid-area: price;
+  }
+}
+
 /*# sourceMappingURL=offers.css.map */

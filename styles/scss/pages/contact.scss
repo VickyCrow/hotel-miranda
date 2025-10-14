@@ -24,6 +24,8 @@
         display:inline-block;
         margin: 0 0.5rem;
     }
+
+    
 }
 
 .contact{
@@ -44,6 +46,10 @@
 
 #contact-section{
     padding: 1rem;
+
+    & >img{
+        max-width: 100%;
+    }
 }
 
 #image-container{
@@ -81,5 +87,52 @@
         border: none;
         width: 100%;
         margin-bottom: 2rem;
+    }
+}
+
+@media screen and (width >= 1000px) {
+
+    section{
+        padding-left: 15% !important;
+        padding-right: 15% !important;
+    }
+
+    #contact-section{
+        display: grid;
+        
+        grid-template-areas:
+        ". . ."
+        "img img img";
+        grid-template-columns: 3(1fr);
+
+        & > img {
+            grid-area: img;
+            justify-self: center;
+        }
+    }
+
+    #form-section{
+
+        & > form{
+            display: grid;
+            grid-template-areas:
+            "name email"
+            "phone subject"
+            "textarea textarea"
+            "button button";
+
+            & > textarea{
+                grid-area: textarea;
+            }
+
+            & > button{
+                grid-area: button;
+                justify-self: center;
+                width: 30%;
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+            }
+        }
+        
     }
 }

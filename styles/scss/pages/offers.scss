@@ -135,3 +135,49 @@
         padding-bottom: 2rem;
     }
 }
+
+@media screen and (width >= 1000px){
+    section{
+        padding-left: 15% !important;
+        padding-right: 15% !important;
+    }
+
+    .room-details{
+        display:grid;
+        grid-template: 
+        "title4 . price"
+        "title . price"
+        "lorem column1 column2"
+        "button . .";
+        gap: 0 1rem;
+
+        grid-template-columns: auto 20% 20%;
+        & > h4{
+            grid-area: title4;
+        }
+        & > h1{
+            grid-area: title;
+        }
+        & > p{
+            grid-area: lorem;
+        }
+        .column{
+            width: 100% !important;
+        }
+        .column1{
+            grid-area: column1;
+        }
+        .column2{
+            grid-area: column2;
+        }
+        & > button{
+            grid-area: button;
+            width: 50%;
+        }
+        .room-price-container{
+            position: relative;
+            grid-area: price;
+        }
+
+    }
+}
